@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: de.htwberlin.kbe.gruppe7.MauMauSpiel.impl.KartenServieImplTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.011 s <<< FAILURE! - in de.htwberlin.kbe.gruppe7.MauMauSpiel.impl.KartenServieImplTest
-de.htwberlin.kbe.gruppe7.MauMauSpiel.impl.KartenServieImplTest  Time elapsed: 0.008 s  <<< ERROR!
-org.junit.platform.commons.JUnitException: @BeforeAll method 'public void de.htwberlin.kbe.gruppe7.MauMauSpiel.impl.KartenServieImplTest.setUp()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
-
