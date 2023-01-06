@@ -6,11 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="RegelnVerwaltung" />
-        <module name="KartenVerwaltung" />
-        <module name="VirtuellerSpielerVerwaltung" />
-        <module name="SpielerVerwaltung" />
-        <module name="SpielVerwaltung" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +14,7 @@
       <module name="RegelnVerwaltung" target="17" />
       <module name="SpielerVerwaltung" target="17" />
       <module name="SpielVerwaltung" target="17" />
+      <module name="ui" target="1.7" />
       <module name="VirtuellerSpielerVerwaltung" target="17" />
     </bytecodeTargetLevel>
   </component>
