@@ -8,12 +8,16 @@ public interface RegelnService {
 	
     int zweiKartenZiehen(Karte gelegteKarte, int zuziehendeKarte);
 
-    int zweiKartenZiehen(Karte gelegteKarte, Spieler spieler);
+   int zweiKartenZiehen(Karte gelegteKarte, Spieler spieler);
 
     boolean spielerAussetzen(Karte gelegteKarte);
     
     boolean richtungWechsel(Karte gelegteKarte);
     
     Farbe sichFarbeWuenschen(Karte gelegteKarte, int farbe);
+
+    boolean prüfeZweiKartenZiehen (Karte gelegteKarte);
+
+    boolean prüfeGelegteKarteGueltig (Karte gelegteKarte, Karte letzteStapelKarte, Farbe spielFarbe);
 
 }

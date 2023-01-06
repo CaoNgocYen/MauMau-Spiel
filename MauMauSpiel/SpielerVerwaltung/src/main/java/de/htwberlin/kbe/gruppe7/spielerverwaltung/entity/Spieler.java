@@ -14,6 +14,8 @@ public class Spieler {
 	private boolean gesagtMau = false;
 
 	private boolean gesagtMauMau = false;
+
+	private boolean virtuellerSpieler = false;
 	
 	public Spieler(String name) {
 		super();
@@ -56,6 +58,14 @@ public class Spieler {
 
 	public boolean isGesagtMauMau() {
 		return gesagtMauMau;
+	}
+
+	public boolean isVirtuellerSpieler() {
+		return virtuellerSpieler;
+	}
+
+	public void setVirtuellerSpieler(boolean virtuellerSpieler) {
+		this.virtuellerSpieler = virtuellerSpieler;
 	}
 
 	public void setGesagtMauMau(boolean gesagtMauMau) {

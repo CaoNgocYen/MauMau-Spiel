@@ -57,4 +57,17 @@ public class RegelnServiceImpl implements RegelnService {
 		return null;
 	}
 
+	@Override
+	public boolean prüfeZweiKartenZiehen(Karte gelegteKarte) {
+		return gelegteKarte.getWert().equals(Wert.SIEBEN);
+	}
+
+	@Override
+	public boolean prüfeGelegteKarteGueltig(Karte gelegteKarte, Karte letzteStapelKarte, Farbe spielFarbe) {
+		if((gelegteKarte.getFarbe() == letzteStapelKarte.getFarbe()) || (gelegteKarte.getWert() == letzteStapelKarte.getWert()) || gelegteKarte.getFarbe().equals(spielFarbe) ){
+			return true;
+		}
+		else return false;
+	}
+
 }

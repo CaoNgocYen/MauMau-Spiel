@@ -3,7 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/KBE.iml" filepath="$PROJECT_DIR$/.idea/KBE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/ui/ui/ui.iml" filepath="$PROJECT_DIR$/MauMauSpiel/ui/ui/ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/KartenVerwaltung.iml" filepath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/KartenVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/MauMauSpiel.iml" filepath="$PROJECT_DIR$/MauMauSpiel/MauMauSpiel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/RegelnVerwaltung.iml" filepath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/RegelnVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/SpielVerwaltung.iml" filepath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/SpielVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/SpielerVerwaltung.iml" filepath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/SpielerVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/VirtuellerSpielerVerwaltung.iml" filepath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/VirtuellerSpielerVerwaltung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MauMauSpiel/ui/ui.iml" filepath="$PROJECT_DIR$/MauMauSpiel/ui/ui.iml" />
     </modules>
   </component>
 </project>

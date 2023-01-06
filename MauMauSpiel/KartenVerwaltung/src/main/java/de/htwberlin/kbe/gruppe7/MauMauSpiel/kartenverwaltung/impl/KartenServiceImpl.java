@@ -20,7 +20,7 @@ public class KartenServiceImpl implements KartenService {
 	}
 
 	@Override
-	public List<Karte> anlegenStapel() {
+	public List<Karte> anlegenStapel(int anzahlKarten) {
 		List<Karte> kartenStapel = new ArrayList();
 		for (Wert wert : Wert.values()) {
 			for (Farbe farbe : Farbe.values()) {

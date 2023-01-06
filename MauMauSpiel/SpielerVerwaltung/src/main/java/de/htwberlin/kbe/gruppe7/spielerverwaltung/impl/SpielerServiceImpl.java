@@ -52,4 +52,13 @@ public class SpielerServiceImpl implements SpielerService {
 		}
 	}
 
+	@Override
+	public Spieler getNextSpieler(List<Spieler> spielerList, Spieler aktiverSpieler) {
+		int spielerIndex = spielerList.indexOf(aktiverSpieler)+1;
+		if(spielerIndex > spielerList.size()-1){
+			spielerIndex = 0;
+		}
+		return spielerList.get(spielerIndex);
+	}
+
 }
