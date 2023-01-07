@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cddee4e-8b2d-442f-83fe-74a3b82e419d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/StandardRegelnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/StandardRegelnServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/KBE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KBE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/impl/KartenServieImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/impl/KartenServieImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/RegelnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/SondernRegelnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/RegelnServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/entity/Spieler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/entity/Spieler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/export/SpielerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/export/SpielerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerVerwaltungTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerVerwaltungTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +64,77 @@
       <recent name="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.KartenServieImplTest">
+    <configuration name="KartenServieImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.kartenverwaltung.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.kartenverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.kartenverwaltung.impl.KartenServieImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SondernRegelnServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.SondernRegelnServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SondernRegelnServiceImplTest.testBudeNichtÜberBude" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.SondernRegelnServiceImplTest" />
+      <option name="METHOD_NAME" value="testBudeNichtÜberBude" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpielerVerwaltungTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpielerVerwaltung" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.spielerverwaltung.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.spielerverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.spielerverwaltung.impl.SpielerVerwaltungTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.KartenServieImplTest" />
+        <item itemvalue="JUnit.SpielerVerwaltungTest" />
+        <item itemvalue="JUnit.SondernRegelnServiceImplTest.testBudeNichtÜberBude" />
+        <item itemvalue="JUnit.SondernRegelnServiceImplTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +146,7 @@
       <workItem from="1669284074939" duration="1404000" />
       <workItem from="1669410563445" duration="361000" />
       <workItem from="1669417164820" duration="3195000" />
-      <workItem from="1673084678962" duration="1263000" />
+      <workItem from="1673084678962" duration="1887000" />
     </task>
     <servers />
   </component>

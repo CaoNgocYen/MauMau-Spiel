@@ -32,7 +32,7 @@ public class SondernRegelnServiceImplTest {
 	}
 
 	@Test
-	public void tesBudeNichtÜberBude() throws KarteNichtGefundenException {
+	public void testBudeNichtÜberBude() throws KarteNichtGefundenException {
 		int anzahlZuziehendKarten = 2;
 		sondernRegelnService.ueberpruefenKarte(bube8, pik7, null, anzahlZuziehendKarten);
 	}

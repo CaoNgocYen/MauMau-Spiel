@@ -4,17 +4,17 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
 import java.util.List;
 
 public class Spieler {
-	
+
 	private String name;
 
 	private int punkte;
 
 	private List<Karte> spielerStapel;
-	
+
 	private boolean gesagtMau = false;
 
 	private boolean gesagtMauMau = false;
-	
+
 	public Spieler(String name) {
 		super();
 		this.name = name;
@@ -61,5 +61,6 @@ public class Spieler {
 	public void setGesagtMauMau(boolean gesagtMauMau) {
 		this.gesagtMauMau = gesagtMauMau;
 	}
-	
+
 }
+

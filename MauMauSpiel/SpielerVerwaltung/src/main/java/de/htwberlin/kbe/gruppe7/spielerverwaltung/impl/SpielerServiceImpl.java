@@ -9,9 +9,9 @@ import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.export.SpielerService;
 
 public class SpielerServiceImpl implements SpielerService {
-	
+
 	private List<Spieler> spielers = new ArrayList<>();
-	
+
 	private List<Karte> spielerStapel = new ArrayList<>();
 
 	@Override
@@ -23,19 +23,29 @@ public class SpielerServiceImpl implements SpielerService {
 	}
 
 	@Override
-	public Spieler ziehenKarte(Spieler spieler, Karte karte) {
+	public Spieler handKarteHinzufuegen(Spieler spieler, Karte hinzufuegendekarte) {
 		List<Karte> spielerStapel = new ArrayList<>();
 		spielerStapel = spieler.getSpielerStapel();
-		spielerStapel.add(karte);
+		spielerStapel.add(hinzufuegendekarte);
 		spieler.setSpielerStapel(spielerStapel);
 		return spieler;
 	}
 
 	@Override
-	public Spieler entfernenKarte(Spieler spieler, Karte karte) throws KarteNichtGefundenException {
+	public Spieler kartenAusZiehstapelZiehen(Spieler spieler, Karte ziehendekarte) {
+		List<Karte> spielerStapel = new ArrayList<>();
 		spielerStapel = spieler.getSpielerStapel();
-		if (spielerStapel.contains(karte)) {
-			spielerStapel.remove(karte);
+		spielerStapel.add(ziehendekarte);
+		spieler.setSpielerStapel(spielerStapel);
+		return spieler;
+	}
+
+
+	@Override
+	public Spieler handKarteEntfernen(Spieler spieler, Karte entfernendekarte) throws KarteNichtGefundenException {
+		spielerStapel = spieler.getSpielerStapel();
+		if (spielerStapel.contains(entfernendekarte)) {
+			spielerStapel.remove(entfernendekarte);
 			spieler.setSpielerStapel(spielerStapel);
 		} else
 			throw new KarteNichtGefundenException();
@@ -43,9 +53,9 @@ public class SpielerServiceImpl implements SpielerService {
 	}
 
 	@Override
-	public Spieler ablegenKarte(Spieler spieler, Karte karte) throws KarteNichtGefundenException {
+	public Spieler handKartenAblegen(Spieler spieler, Karte ablegendekarte) throws KarteNichtGefundenException {
 		spielerStapel = spieler.getSpielerStapel();
-		if (spielerStapel.contains(karte)) {
+		if (spielerStapel.contains(ablegendekarte)) {
 			return spieler;
 		} else {
 			throw new KarteNichtGefundenException();
@@ -53,3 +63,4 @@ public class SpielerServiceImpl implements SpielerService {
 	}
 
 }
+

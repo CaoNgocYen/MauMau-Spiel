@@ -5,13 +5,16 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGe
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
 
 public interface SpielerService {
-	
-	Spieler anlegenSpieler(String s);
-	
-	Spieler ziehenKarte(Spieler p, Karte karte);
-	
-	Spieler entfernenKarte(Spieler spieler, Karte karte) throws KarteNichtGefundenException;
-	
-	Spieler ablegenKarte(Spieler p, Karte karte) throws KarteNichtGefundenException;
-	
+
+	Spieler anlegenSpieler(String name);
+
+	Spieler handKarteHinzufuegen(Spieler spieler, Karte hinzufuegendekarte);
+
+	Spieler kartenAusZiehstapelZiehen(Spieler spieler, Karte ziehendekarte);
+
+	Spieler handKarteEntfernen(Spieler spieler, Karte entfernendekarte) throws KarteNichtGefundenException;
+
+	Spieler handKartenAblegen(Spieler spieler, Karte ablegendekarte) throws KarteNichtGefundenException;
+
 }
+

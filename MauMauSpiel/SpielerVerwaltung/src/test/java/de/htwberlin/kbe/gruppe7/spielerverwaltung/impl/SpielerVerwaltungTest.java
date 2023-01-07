@@ -1,7 +1,8 @@
 package de.htwberlin.kbe.gruppe7.spielerverwaltung.impl;
 
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.*;
+
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
@@ -46,7 +47,7 @@ public class SpielerVerwaltungTest {
 
     @Test
     public void testZiehenKarte(){
-        spielerService.ziehenKarte(spieler, karte1);
+        spielerService.handKarteHinzufuegen(spieler, karte1);
         handKarten.add(karte1);
         Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
 
@@ -54,7 +55,7 @@ public class SpielerVerwaltungTest {
 
     @Test
     public void testEntfernenKarte() throws KarteNichtGefundenException {
-        spielerService.entfernenKarte(spieler, karte2);
+        spielerService.handKarteEntfernen(spieler, karte2);
         handKarten.remove(karte2);
         Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
 
