@@ -1,24 +1,23 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl;
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.SpielService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
-import de.htwberlin.kbe.gruppe7.regelnverwaltung.export.SondernRegelnService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.SondernRegelnService;
 
 import java.util.List;
 
 public class SpielServiceImpl implements SpielService {
 
-
     @Override
-    public void setRegelnwerk(boolean standartRegeln) {
+    public void setRegelnwerk(boolean standardRegeln) {
 
     }
 
     @Override
-    public SondernRegelnService getRegelnwerl() {
+    public SondernRegelnService getRegelnwerk() {
         return null;
     }
 
@@ -26,13 +25,13 @@ public class SpielServiceImpl implements SpielService {
      * Diese Methode legt ein Spiel an.
      *
      * @param spielerListe die liste alle spielern
-     * @param regeln       welche regeln fuer das spiel verwendet wird
+     * @param regeln welche regeln fuer das spiel verwendet wird
      * @return Neues Spiel
      */
     @Override
-    public Spiel spielAnlegen(List<String> spielerListe, boolean regeln) {
-        return null;
+    public Spiel spielAnlegen(List<String> spielerListe, boolean regeln) {return null;
     }
+
 
     /**
      * Entnimmt eine oder mehrere Karten vom Ziehstapel.

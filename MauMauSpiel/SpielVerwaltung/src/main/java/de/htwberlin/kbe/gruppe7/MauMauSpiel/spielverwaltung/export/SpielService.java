@@ -1,19 +1,17 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export;
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
-import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
-import de.htwberlin.kbe.gruppe7.regelnverwaltung.export.SondernRegelnService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.SondernRegelnService;
 
 import java.util.List;
 
 public interface SpielService {
 
-    void setRegelnwerk(boolean standartRegeln);
+    void setRegelnwerk(boolean standardRegeln);
 
-    SondernRegelnService getRegelnwerl();
-
+    SondernRegelnService getRegelnwerk();
 
     /**
      * Diese Methode legt ein Spiel an.

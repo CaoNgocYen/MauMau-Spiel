@@ -11,12 +11,6 @@
   <dependencies>
     <dependency>
       <groupId>de.htwberlin.kbe.gruppe7</groupId>
-      <artifactId>KartenVerwaltung</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>de.htwberlin.kbe.gruppe7</groupId>
       <artifactId>SpielerVerwaltung</artifactId>
       <version>0.0.1-SNAPSHOT</version>
       <scope>compile</scope>

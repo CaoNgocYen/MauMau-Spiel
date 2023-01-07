@@ -1,15 +1,14 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.impl;
 
-
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Wert;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl.SpielServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
-import de.htwberlin.kbe.gruppe7.regelnverwaltung.export.SondernRegelnService;
-import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
-import de.htwberlin.kbe.gruppe7.spielerverwaltung.export.SpielerService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.SondernRegelnService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerService;
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -31,7 +30,7 @@ public class SpielServiceTest {
     @Mock
     private SpielerService spielerService;
     @Mock
-    private SondernRegelnService regelnService;
+    private SondernRegelnService sondernRegelnService;
 
     //    @Mock
 //    private SondernRegelnService sondernRegelnService;
@@ -85,10 +84,9 @@ public class SpielServiceTest {
 
     @Test
     public void testKarteLegen (){
-        Mockito.when(regelnService.richtungWechsel(any())).thenReturn(false);
-        Mockito.when(regelnService.sichFarbeWuenschen(any(),1)).thenReturn(Farbe.HERZ);
-        Mockito.when(regelnService.zweiKartenZiehen(herz7,0)).thenReturn(2);
+        Mockito.when(sondernRegelnService.richtungWechsel(any())).thenReturn(false);
+        Mockito.when(sondernRegelnService.sichFarbeWuenschen(any(),1)).thenReturn(Farbe.HERZ);
+        Mockito.when(sondernRegelnService.zweiKartenZiehen(herz7,0)).thenReturn(2);
         Assertions.assertEquals(2,spielService.legeKarte(spiel,herz7,spiel.getAktiverSpieler()).getAnzahlKartenZiehen());
     }
-
 }

@@ -5,27 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cddee4e-8b2d-442f-83fe-74a3b82e419d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/Konfiguration/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/konfiguration/DependencyInjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/KIService/export/KIService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/KIService/impl/KIServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/ui/export/UIControllerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/ui/impl/UIControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/ui/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/ui/view/UIView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/KBE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KBE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Farbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/Farbe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Karte.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/Karte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/KarteNichtGefundenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/KarteNichtGefundenException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Wert.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/Wert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KartenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/export/KartenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/impl/KartenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/SondernRegelnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/SondernRegelnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/StandardRegelnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/StandardRegelnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/StandardRegelnServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/StandardRegelnServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/entity/Spiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/entity/Spiel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/KartenVerwaltung.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/Farbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/Farbe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/Karte.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/Karte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/KarteNichtGefundenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KarteNichtGefundenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/entity/Wert.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/Wert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/export/KartenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KartenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/kartenverwaltung/impl/KartenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/impl/KartenServieImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServieImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/MauMauSpiel.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/RegelnVerwaltung.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/SondernRegelnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/regelnverwaltung/export/SondernRegelnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/StandardRegelnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/regelnverwaltung/export/StandardRegelnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/regelnverwaltung/impl/SondernRegelnServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/StandardRegelnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/regelnverwaltung/impl/StandardRegelnServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/regelnverwaltung/impl/SondernRegelnServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/StandardRegelnServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/regelnverwaltung/impl/StandardRegelnServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/SpielVerwaltung.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/ui/ui.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/entity/Spiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/export/Spiel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/export/SpielService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/export/SpielService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/impl/SpielServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielverwaltung/impl/SpielServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SpielServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SpielServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/SpielerVerwaltung.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/SpielerVerwaltung.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/entity/Spieler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/entity/Spieler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/export/SpielerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/export/SpielerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerVerwaltungTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerVerwaltungTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/SpielerVerwaltung.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/entity/Spieler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielerverwaltung/export/Spieler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/export/SpielerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielerverwaltung/export/SpielerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielerverwaltung/impl/SpielerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/spielerverwaltung/impl/SpielerVerwaltungTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/spielerverwaltung/impl/SpielerVerwaltungTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/VirtuellerSpielerVerwaltung.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/VirtuellerSpielerVerwaltung.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/src/main/java/de/htwberlin/kbe/MauMauSpiel/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +97,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2HzNhpxCx5MhaqqhTufDnR6rUkv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -59,34 +117,44 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/yencao/Dropbox/HTW Berlin/Sem 5/KBE/MauMau-Spiel/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "/Users/yencao/Desktop/MauMauSpiel/MauMauSpiel/ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MauMauSpiel/ui" />
+      <recent name="$PROJECT_DIR$/MauMauSpiel" />
+      <recent name="$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung" />
       <recent name="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl" />
       <recent name="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl" />
-      <recent name="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export" />
+      <recent name="de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export" />
+      <recent name="de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpielerVerwaltungTest">
+  <component name="RunManager" selected="JUnit.SpielerVerwaltungTest.testNeuerSpielerAnlegen">
     <configuration name="KartenServieImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KBE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.kartenverwaltung.impl.*" />
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.kartenverwaltung.impl" />
-      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.kartenverwaltung.impl.KartenServieImplTest" />
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl.KartenServieImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,28 +164,28 @@
       <module name="KBE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.*" />
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl" />
-      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.SondernRegelnServiceImplTest" />
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.SondernRegelnServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SondernRegelnServiceImplTest.testBudeNichtÜberBude" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SondernRegelnServiceImplTest.testSpielerAussetzen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KBE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.*" />
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl" />
-      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.regelnverwaltung.impl.SondernRegelnServiceImplTest" />
-      <option name="METHOD_NAME" value="testBudeNichtÜberBude" />
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.SondernRegelnServiceImplTest" />
+      <option name="METHOD_NAME" value="testSpielerAussetzen" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,28 +206,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpielerVerwaltungTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpielerVerwaltungTest.testNeuerSpielerAnlegen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpielerVerwaltung" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.spielerverwaltung.impl.*" />
+          <option name="PATTERN" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.spielerverwaltung.impl" />
-      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.spielerverwaltung.impl.SpielerVerwaltungTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.impl" />
+      <option name="MAIN_CLASS_NAME" value="de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.impl.SpielerVerwaltungTest" />
+      <option name="METHOD_NAME" value="testNeuerSpielerAnlegen" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpielerVerwaltungTest" />
-        <item itemvalue="JUnit.SondernRegelnServiceImplTest" />
+        <item itemvalue="JUnit.SpielerVerwaltungTest.testNeuerSpielerAnlegen" />
         <item itemvalue="JUnit.SpielServiceTest" />
         <item itemvalue="JUnit.KartenServieImplTest" />
-        <item itemvalue="JUnit.SondernRegelnServiceImplTest.testBudeNichtÜberBude" />
+        <item itemvalue="JUnit.SondernRegelnServiceImplTest.testSpielerAussetzen" />
+        <item itemvalue="JUnit.SondernRegelnServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +243,7 @@
       <workItem from="1669284074939" duration="1404000" />
       <workItem from="1669410563445" duration="361000" />
       <workItem from="1669417164820" duration="3195000" />
-      <workItem from="1673084678962" duration="3036000" />
+      <workItem from="1673084678962" duration="15561000" />
     </task>
     <servers />
   </component>

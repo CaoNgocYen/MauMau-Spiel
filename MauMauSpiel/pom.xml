@@ -18,6 +18,8 @@
     <module>SpielerVerwaltung</module>
     <module>KartenVerwaltung</module>
     <module>VirtuellerSpielerVerwaltung</module>
+      <module>Konfiguration</module>
+      <module>ui</module>
   </modules>
 
   <properties>

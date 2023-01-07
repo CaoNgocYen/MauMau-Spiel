@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MauMauSpiel/SpielVerwaltung/src/main/java" charset="UTF-8" />
@@ -13,5 +15,7 @@
     <file url="file://$PROJECT_DIR$/MauMauSpiel/VirtuellerSpielerVerwaltung/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MauMauSpiel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MauMauSpiel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MauMauSpiel/ui/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MauMauSpiel/ui/src/main/resources" charset="UTF-8" />
   </component>
 </project>

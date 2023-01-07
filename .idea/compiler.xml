@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/MauMauSpiel/Konfiguration/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpielerVerwaltung" />
+        <module name="Konfiguration" />
+        <module name="ui" />
         <module name="RegelnVerwaltung" />
         <module name="KartenVerwaltung" />
         <module name="VirtuellerSpielerVerwaltung" />
-        <module name="SpielerVerwaltung" />
         <module name="SpielVerwaltung" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="KartenVerwaltung" target="17" />
-      <module name="MauMauSpiel" target="17" />
-      <module name="RegelnVerwaltung" target="17" />
-      <module name="SpielerVerwaltung" target="17" />
-      <module name="SpielVerwaltung" target="17" />
-      <module name="VirtuellerSpielerVerwaltung" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
