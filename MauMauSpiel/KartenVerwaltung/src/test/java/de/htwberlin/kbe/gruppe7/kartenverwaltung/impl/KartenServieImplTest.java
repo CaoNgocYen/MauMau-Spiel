@@ -19,7 +19,7 @@ public class KartenServieImplTest {
 	@BeforeAll
 	public static void initialize() {
 	}
-	
+
 	@BeforeEach
 	public void setUp() {
 		kartenService = (KartenService) new KartenServiceImpl();
@@ -54,7 +54,7 @@ public class KartenServieImplTest {
 		Assertions.assertNotNull(kartenStapel);
 		Assertions.assertEquals(sizeStapel, kartenStapel.size());
 	}
-	
+
 
 	@Test
 	public void testHinzufuegfenKarte(){
@@ -69,7 +69,7 @@ public class KartenServieImplTest {
 		Assertions.assertNotNull(spielerStapel);
 		Assertions.assertEquals(anzahl, spielerStapel.size());
 	}
-	
+
 
 	@Test
 	public void testEntfernenKarten() throws KarteNichtGefundenException {
@@ -78,7 +78,7 @@ public class KartenServieImplTest {
 		List<Karte> kartenStapel1 = kartenService.anlegenStapel();
 		List<Karte> kartenStapel2 = kartenService.hinzufuegfenKarte(kartenStapel1, anzahl);
 		kartenStapel2.add(karte);
-	
+
 		// Act
 		List<Karte> kartenStapel3 = kartenService.entfernenKarten(kartenStapel2, karte);
 
@@ -86,7 +86,7 @@ public class KartenServieImplTest {
 		Assertions.assertNotNull(kartenStapel2);
 		Assertions.assertEquals(kartenStapel2, kartenStapel3);
 	}
-	
+
 
 	@Test
 	public void testEntfernenKartenThrowsKarteNichtGefundenException() throws KarteNichtGefundenException{
@@ -94,7 +94,7 @@ public class KartenServieImplTest {
 		int anzahl = 5;
 		List<Karte> kartenStapel1 = kartenService.anlegenStapel();
 		List<Karte> kartenStapel2 = kartenService.hinzufuegfenKarte(kartenStapel1, anzahl);
-	
+
 		// Act
 		kartenService.entfernenKarten(kartenStapel2, karte);
 
@@ -102,31 +102,31 @@ public class KartenServieImplTest {
 		Assertions.assertNotNull(kartenStapel2);
 		Assertions.assertFalse(kartenStapel2.contains(karte));
 	}
-	
+
 
 	@Test
 	public void testMischenKarten() {
 		// Arrange
 		List<Karte> kartenStapel = kartenService.anlegenStapel();
 		Karte karte1 = kartenStapel.get(0);
-	
+
 		// Act
 		kartenService.mischenKarten(kartenStapel);
 		Karte karte2 = kartenStapel.get(0);
-		
+
 		// Assert
 		Assertions.assertNotNull(kartenStapel);
 		Assertions.assertNotEquals(karte1, karte2);
 	}
-	
+
 	@AfterEach
 	public void tearDown() {
-		
+
 	}
 
 	@AfterAll
 	public static void uninitialize() {
 
 	}
-	
+
 }

@@ -5,18 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cddee4e-8b2d-442f-83fe-74a3b82e419d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/StandardRegelnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/SondernRegelnServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/StandardRegelnServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/KBE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KBE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Farbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Farbe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Karte.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Karte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/KarteNichtGefundenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/KarteNichtGefundenException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Wert.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Wert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KartenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KartenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/impl/KartenServieImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/kartenverwaltung/impl/KartenServieImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/RegelnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/export/SondernRegelnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/regelnverwaltung/impl/RegelnServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +41,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -61,7 +75,7 @@
       <workItem from="1669284074939" duration="1404000" />
       <workItem from="1669410563445" duration="361000" />
       <workItem from="1669417164820" duration="3195000" />
-      <workItem from="1673084678962" duration="635000" />
+      <workItem from="1673084678962" duration="1263000" />
     </task>
     <servers />
   </component>
