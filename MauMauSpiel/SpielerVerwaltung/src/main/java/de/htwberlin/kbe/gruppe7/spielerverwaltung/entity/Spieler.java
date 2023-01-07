@@ -1,5 +1,5 @@
 package de.htwberlin.kbe.gruppe7.spielerverwaltung.entity;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package de.htwberlin.kbe.gruppe7.spielerverwaltung.export;
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.KarteNichtGefundenException;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
 
 public interface SpielerService {

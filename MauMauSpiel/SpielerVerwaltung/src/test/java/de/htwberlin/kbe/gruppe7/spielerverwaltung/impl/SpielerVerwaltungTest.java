@@ -1,13 +1,12 @@
 package de.htwberlin.kbe.gruppe7.spielerverwaltung.impl;
 
-
-
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Farbe;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.KarteNichtGefundenException;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Wert;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.export.SpielerService;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Assertions;
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ public class SpielerVerwaltungTest {
 
     SpielerService spielerService = new SpielerServiceImpl();
     private Spieler spieler;
-    List<Karte>handKarten = new ArrayList<>();
+    List<Karte> handKarten = new ArrayList<>();
     private final Karte karte1 = new Karte(Wert.ACHT, Farbe.PIK);
     private final Karte karte2 = new Karte(Wert.KOENIG, Farbe.KARO);
     private final Karte karte3 = new Karte(Wert.NEUN, Farbe.HERZ);

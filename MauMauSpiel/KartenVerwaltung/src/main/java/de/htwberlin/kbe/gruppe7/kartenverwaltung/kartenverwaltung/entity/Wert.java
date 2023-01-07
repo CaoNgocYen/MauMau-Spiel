@@ -1,4 +1,4 @@
-package de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity;
+package de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity;
 
 /**
  *

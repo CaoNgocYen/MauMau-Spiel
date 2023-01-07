@@ -7,10 +7,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Farbe;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.KarteNichtGefundenException;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Wert;
 import de.htwberlin.kbe.gruppe7.regelnverwaltung.export.SondernRegelnService;
 
 public class SondernRegelnServiceImplTest {

@@ -9,11 +9,11 @@ package de.htwberlin.kbe.gruppe7.regelnverwaltung.export;
  *  *
  */
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.KarteNichtGefundenException;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Wert;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Farbe;
 
 public interface SondernRegelnService {
 

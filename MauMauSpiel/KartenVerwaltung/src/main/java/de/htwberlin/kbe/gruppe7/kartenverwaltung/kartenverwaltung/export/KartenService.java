@@ -1,11 +1,12 @@
-package de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export;
+package de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.export;
 
 import java.util.List;
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Farbe;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.KarteNichtGefundenException;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Wert;
+
 
 /**
  *
@@ -23,7 +24,7 @@ public interface KartenService {
 
 
 	/**
-	 * Kartenstapel wird erzeugt.
+	 * Der Kartenstapel wird erzeugt.
 	 * @return kartenStapel angelegter Kartenstapel
 	 *
 	 */
@@ -41,7 +42,7 @@ public interface KartenService {
 
 	/**
 	 * Entfernt eine Karte aus dem Stapel und gibt den neuen Stapel zurück.
-	 * @param kartenStapel Kartenstapel, dem die Karte zuentfernen werden soll
+	 * @param kartenStapel Kartenstapel, dem die Karte hinzugefügt werden soll
 	 * @param zuEntfernenKarten Karte, die entfernt werden soll
 	 * KarteNichtGefundenException throw exception wenn die Karte kann nicht abgelegt wird
 	 * @return neuer Kartenstapel

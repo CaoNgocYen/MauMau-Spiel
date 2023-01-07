@@ -7,7 +7,7 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl.SpielServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
-import de.htwberlin.kbe.gruppe7.regelnverwaltung.export.RegelnService;
+import de.htwberlin.kbe.gruppe7.regelnverwaltung.export.SondernRegelnService;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.export.SpielerService;
 import org.junit.Before;
@@ -31,9 +31,9 @@ public class SpielServiceTest {
     @Mock
     private SpielerService spielerService;
     @Mock
-    private RegelnService regelnService;
+    private SondernRegelnService regelnService;
 
-//    @Mock
+    //    @Mock
 //    private SondernRegelnService sondernRegelnService;
     @Mock
     private KartenService kartenService;

@@ -1,12 +1,12 @@
 package de.htwberlin.kbe.gruppe7.kartenverwaltung.impl;
 
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl.KartenServiceImpl;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Farbe;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.KarteNichtGefundenException;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.entity.Wert;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.export.KartenService;
+import de.htwberlin.kbe.gruppe7.kartenverwaltung.kartenverwaltung.impl.KartenServiceImpl;
 import org.junit.jupiter.api.*;
 
 import java.util.List;
