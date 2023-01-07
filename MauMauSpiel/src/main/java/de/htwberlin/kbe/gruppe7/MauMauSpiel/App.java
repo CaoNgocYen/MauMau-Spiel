@@ -1,4 +1,4 @@
-package de.htwberlin.kbe.MauMauSpiel;
+package de.htwberlin.kbe.gruppe7.MauMauSpiel;
 
 public class App {
     public static void main(String[] args) {

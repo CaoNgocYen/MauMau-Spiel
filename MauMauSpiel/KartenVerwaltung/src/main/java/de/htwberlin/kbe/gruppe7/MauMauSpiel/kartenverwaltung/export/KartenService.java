@@ -15,7 +15,7 @@ public interface KartenService {
 
 	Karte anlegenKarte(Wert wert, Farbe farbe);
 
-	List<Karte> anlegenStapel();
+	List<Karte> anlegenStapel(int anzahlKarten);
 	
 
 	List<Karte> hinzufuegfenKarte(List<Karte> kartenStapel, int anzahlVonKarten);

@@ -3,7 +3,6 @@ package de.htwberlin.kbe.gruppe7.spielerverwaltung.impl;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.*;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.KarteNichtGefundenException;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Wert;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
 import de.htwberlin.kbe.gruppe7.spielerverwaltung.export.SpielerService;
