@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3cddee4e-8b2d-442f-83fe-74a3b82e419d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/MauMau-Spiel.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/SondernRegelnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/StandardRegelnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SondernRegelnServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/StandardRegelnServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SondereRegelnServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/StandardRegelnServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/Farbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/Farbe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/Karte.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/Karte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/KarteNichtGefundenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/KarteNichtGefundenException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/Wert.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/entity/Wert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/KartenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/KartenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/KartenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/KartenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/RegelnService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/RegelnServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SondereRegelnImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/SpielerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/export/SpielerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SpielerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/SpielerVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl/SpielerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Farbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Farbe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Karte.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Karte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/KarteNichtGefundenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/KarteNichtGefundenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Wert.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/entity/Wert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KartenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/export/KartenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/MauMauSpiel/KartenVerwaltung/src/main/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/kartenverwaltung/impl/KartenServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +35,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/yencao/Dropbox/HTW Berlin/Sem 5/KBE/MauMau-Spiel/MauMauSpiel/RegelnVerwaltung/src/test/java/de/htwberlin/kbe/gruppe7/MauMauSpiel/impl",
-    "nodejs_package_manager_path": "npm"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -69,6 +61,7 @@
       <workItem from="1669284074939" duration="1404000" />
       <workItem from="1669410563445" duration="361000" />
       <workItem from="1669417164820" duration="3195000" />
+      <workItem from="1673084678962" duration="635000" />
     </task>
     <servers />
   </component>
@@ -80,7 +73,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

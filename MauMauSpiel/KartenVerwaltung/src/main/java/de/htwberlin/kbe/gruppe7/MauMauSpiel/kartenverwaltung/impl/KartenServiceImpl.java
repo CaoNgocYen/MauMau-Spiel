@@ -15,8 +15,8 @@ public class KartenServiceImpl implements KartenService {
 
 	@Override
 	public Karte anlegenKarte(Wert wert, Farbe farbe) {
-		Karte card = new Karte(wert, farbe);
-	    return card;
+		Karte karte = new Karte(wert, farbe);
+		return karte;
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class KartenServiceImpl implements KartenService {
 	public List<Karte> hinzufuegfenKarte(List<Karte> kartenStapel, int anzahlVonKarten) {
 		List<Karte> spielerStapel = new ArrayList();
 		mischenKarten(kartenStapel);
-		for (int i = 0; i < anzahlVonKarten; i++ ) { 
+		for (int i = 0; i < anzahlVonKarten; i++ ) {
 			spielerStapel.add(kartenStapel.get(i));
 		}
 		return spielerStapel;
@@ -42,12 +42,12 @@ public class KartenServiceImpl implements KartenService {
 
 	@Override
 	public List<Karte> entfernenKarten(List<Karte> kartenStapel, Karte zuEntfernenKarten) throws KarteNichtGefundenException {
-	if (kartenStapel.contains(zuEntfernenKarten)) {
-		kartenStapel.remove(zuEntfernenKarten);
-	} else {
-		throw new KarteNichtGefundenException();
-	}
-	return kartenStapel;
+		if (kartenStapel.contains(zuEntfernenKarten)) {
+			kartenStapel.remove(zuEntfernenKarten);
+		} else {
+			throw new KarteNichtGefundenException();
+		}
+		return kartenStapel;
 	}
 
 	@Override
