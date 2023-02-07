@@ -1,8 +1,8 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.view;
 
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,9 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.konfiguration;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl.KartenServiceImpl;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.SondernRegelnServiceImpl;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.RegelnServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.impl.SpielerServiceImpl;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl.SpielServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.export.UIControllerService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.impl.UIControllerImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.view.UIView;
@@ -11,20 +12,22 @@ import org.picocontainer.MutablePicoContainer;
 import org.picocontainer.Characteristics;
 import org.picocontainer.injectors.ConstructorInjection;
 
-public class DependencyInjection {
+public class Konfig {
     private static MutablePicoContainer container = new DefaultPicoContainer(new ConstructorInjection());
 
-    public static void main(String[] args) {
-        registerComponents();
+    public static void main(String[] arg) {
+        registriereKomponenten();
         container.getComponent(UIControllerService.class).run();
     }
 
-    private static void registerComponents() {
-        container.addComponent(SondernRegelnServiceImpl.class);
-        container.addComponent(SpielerServiceImpl.class);
+
+
+    private static void registriereKomponenten() {
         container.addComponent(KartenServiceImpl.class);
+        container.addComponent(SpielerServiceImpl.class);
+        container.addComponent(RegelnServiceImpl.class);
         container.addComponent(UIView.class);
         container.addComponent(UIControllerImpl.class);
-        container.as(Characteristics.USE_NAMES).addComponent(SpielerServiceImpl.class);
+        container.as(Characteristics.USE_NAMES).addComponent(SpielServiceImpl.class);
     }
 }

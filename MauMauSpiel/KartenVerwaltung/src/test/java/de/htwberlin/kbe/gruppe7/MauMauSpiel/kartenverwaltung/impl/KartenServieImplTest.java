@@ -3,7 +3,6 @@ package de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KarteNichtGefundenException;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Wert;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
 
@@ -28,14 +27,12 @@ public class KartenServieImplTest {
 
 	@Test
 	public void testAnlegenKarte(){
-		// Arrange
+
 		Wert wert = Wert.NEUN;
 		Farbe farbe = Farbe.PIK;
 
-		// Act
 		Karte karte = kartenService.anlegenKarte(wert, farbe);
 
-		// Assert
 		Assertions.assertNotNull(karte);
 		Assertions.assertEquals(wert, karte.getWert());
 		Assertions.assertEquals(farbe, karte.getFarbe());
@@ -48,7 +45,7 @@ public class KartenServieImplTest {
 		int sizeStapel = 32;
 
 		// Act
-		List<Karte> kartenStapel = kartenService.anlegenStapel();
+		List<Karte> kartenStapel = kartenService.anlegenStapel(32);
 
 		// Assert
 		Assertions.assertNotNull(kartenStapel);
@@ -60,7 +57,7 @@ public class KartenServieImplTest {
 	public void testHinzufuegfenKarte(){
 		// Arrange
 		int anzahl = 4;
-		List<Karte> kartenStapel = kartenService.anlegenStapel();
+		List<Karte> kartenStapel = kartenService.anlegenStapel(32);
 
 		// Act
 		List<Karte> spielerStapel = kartenService.hinzufuegfenKarte(kartenStapel, anzahl);
@@ -72,10 +69,10 @@ public class KartenServieImplTest {
 
 
 	@Test
-	public void testEntfernenKarten() throws KarteNichtGefundenException {
+	public void testEntfernenKarten(){
 		// Arrange
 		int anzahl = 5;
-		List<Karte> kartenStapel1 = kartenService.anlegenStapel();
+		List<Karte> kartenStapel1 = kartenService.anlegenStapel(32);
 		List<Karte> kartenStapel2 = kartenService.hinzufuegfenKarte(kartenStapel1, anzahl);
 		kartenStapel2.add(karte);
 
@@ -88,26 +85,26 @@ public class KartenServieImplTest {
 	}
 
 
-	@Test
-	public void testEntfernenKartenThrowsKarteNichtGefundenException() throws KarteNichtGefundenException{
-		// Arrange
-		int anzahl = 5;
-		List<Karte> kartenStapel1 = kartenService.anlegenStapel(32);
-		List<Karte> kartenStapel2 = kartenService.hinzufuegfenKarte(kartenStapel1, anzahl);
-
-		// Act
-		kartenService.entfernenKarten(kartenStapel2, karte);
-
-		// Assert
-		Assertions.assertNotNull(kartenStapel2);
-		Assertions.assertFalse(kartenStapel2.contains(karte));
-	}
+//	@Test
+//	public void testEntfernenKartenThrowsKarteNichtGefundenException() throws KarteNichtGefundenException{
+//		// Arrange
+//		int anzahl = 5;
+//		List<Karte> kartenStapel1 = kartenService.anlegenStapel(32);
+//		List<Karte> kartenStapel2 = kartenService.hinzufuegfenKarte(kartenStapel1, anzahl);
+//
+//		// Act
+//		kartenService.entfernenKarten(kartenStapel2, karte);
+//
+//		// Assert
+//		Assertions.assertNotNull(kartenStapel2);
+//		Assertions.assertFalse(kartenStapel2.contains(karte));
+//	}
 
 
 	@Test
 	public void testMischenKarten() {
 		// Arrange
-		List<Karte> kartenStapel = kartenService.anlegenStapel();
+		List<Karte> kartenStapel = kartenService.anlegenStapel(32);
 		Karte karte1 = kartenStapel.get(0);
 
 		// Act

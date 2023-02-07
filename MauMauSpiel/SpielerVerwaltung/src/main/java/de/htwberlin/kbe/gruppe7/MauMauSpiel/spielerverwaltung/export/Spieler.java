@@ -1,28 +1,34 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Spieler {
 
 	private String name;
 
-	private int punkte;
-
 	private List<Karte> spielerStapel;
 
-	private boolean gesagtMau = false;
+	//private boolean mauGesagt = false;
+	private boolean mauGesagt;
 
-	private boolean gesagtMauMau = false;
+	private boolean mussAussetzen;
 
 	private boolean virtuellerSpieler = false;
-
-	public Spieler(String name) {
-		super();
-		this.name = name;
+	public  Spieler () {
 	}
 
-	public  Spieler () {}
+	public Spieler(String name) {
+		this.name = name;
+		this.spielerStapel = new ArrayList<>();
+	}
+
+	public Spieler(String name, boolean virtuellerSpieler) {
+		this.name = name;
+		this.virtuellerSpieler = virtuellerSpieler;
+		this.spielerStapel = new ArrayList<>();
+	}
 
 	public String getName() {
 		return name;
@@ -30,14 +36,6 @@ public class Spieler {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public int getPunkte() {
-		return punkte;
-	}
-
-	public void setPunkte(int punkte) {
-		this.punkte = punkte;
 	}
 
 	public List<Karte> getSpielerStapel() {
@@ -48,20 +46,20 @@ public class Spieler {
 		this.spielerStapel = spielerStapel;
 	}
 
-	public boolean isGesagtMau() {
-		return gesagtMau;
+	public boolean isMauGesagt() {
+		return mauGesagt;
 	}
 
-	public void setGesagtMau(boolean gesagtMau) {
-		this.gesagtMau = gesagtMau;
+	public void setMauGesagt(boolean mauGesagt) {
+		this.mauGesagt = mauGesagt;
 	}
 
-	public boolean isGesagtMauMau() {
-		return gesagtMauMau;
+	public boolean isMussAussetzen() {
+		return mussAussetzen;
 	}
 
-	public void setGesagtMauMau(boolean gesagtMauMau) {
-		this.gesagtMauMau = gesagtMauMau;
+	public void setMussAussetzen(boolean mussAussetzen) {
+		this.mussAussetzen = mussAussetzen;
 	}
 
 	public boolean isVirtuellerSpieler() {
@@ -71,4 +69,5 @@ public class Spieler {
 		this.virtuellerSpieler = virtuellerSpieler;
 	}
 }
+
 

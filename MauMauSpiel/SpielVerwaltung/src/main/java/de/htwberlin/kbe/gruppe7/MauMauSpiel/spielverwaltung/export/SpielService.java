@@ -3,7 +3,7 @@ package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.SondernRegelnService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.RegelnService;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public interface SpielService {
 
     void setRegelnwerk(boolean standardRegeln);
 
-    SondernRegelnService getRegelnwerk();
+    RegelnService getRegelnwerk();
 
     /**
      * Diese Methode legt ein Spiel an.

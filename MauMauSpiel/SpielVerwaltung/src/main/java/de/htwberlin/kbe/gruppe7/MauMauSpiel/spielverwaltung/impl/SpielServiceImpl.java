@@ -5,7 +5,7 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.SpielService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.SondernRegelnService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.RegelnService;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class SpielServiceImpl implements SpielService {
     }
 
     @Override
-    public SondernRegelnService getRegelnwerk() {
+    public RegelnService getRegelnwerk() {
         return null;
     }
 

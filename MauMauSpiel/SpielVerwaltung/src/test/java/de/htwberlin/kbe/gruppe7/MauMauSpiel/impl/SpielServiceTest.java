@@ -6,7 +6,7 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Wert;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl.SpielServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.SondernRegelnService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.RegelnService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerService;
 import org.junit.Before;
@@ -30,7 +30,7 @@ public class SpielServiceTest {
     @Mock
     private SpielerService spielerService;
     @Mock
-    private SondernRegelnService sondernRegelnService;
+    private RegelnService regeLnService;
 
     //    @Mock
 //    private SondernRegelnService sondernRegelnService;
@@ -84,9 +84,9 @@ public class SpielServiceTest {
 
     @Test
     public void testKarteLegen (){
-        Mockito.when(sondernRegelnService.richtungWechsel(any())).thenReturn(false);
-        Mockito.when(sondernRegelnService.sichFarbeWuenschen(any(),1)).thenReturn(Farbe.HERZ);
-        Mockito.when(sondernRegelnService.zweiKartenZiehen(herz7,0)).thenReturn(2);
+        Mockito.when(regeLnService.richtungWechsel(any())).thenReturn(false);
+        Mockito.when(regeLnService.sichFarbeWuenschen(any(),1)).thenReturn(Farbe.HERZ);
+        Mockito.when(regeLnService.zweiKartenZiehen(herz7,0)).thenReturn(2);
         Assertions.assertEquals(2,spielService.legeKarte(spiel,herz7,spiel.getAktiverSpieler()).getAnzahlKartenZiehen());
     }
 }

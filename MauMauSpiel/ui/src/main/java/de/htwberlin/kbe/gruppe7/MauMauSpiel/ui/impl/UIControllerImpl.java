@@ -1,15 +1,15 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.impl;
 
-
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.export.KIService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Karte;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.exception.AbgelegteKarteIstUngueltig;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.SpielService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.export.UIControllerService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.view.UIView;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.entity.Spieler;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerService;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -33,9 +33,6 @@ public class UIControllerImpl implements UIControllerService {
     private final int anzahlKarten =32;
     private boolean spielWurdeAbgebrochen;
     private final Long spielID =1L;
-
-
-
 
     public UIControllerImpl(SpielService spielService, SpielerService spielerService, KartenService kartenService,
                             KIService kiService, UIView UIView){
@@ -111,7 +108,7 @@ public class UIControllerImpl implements UIControllerService {
     /**
      * Hier wird die Interaktion mit dem "echten" Spieler gesteuert.
      */
-    private void menschlicherSpielzug()   {
+    private void menschlicherSpielzug() throws AbgelegteKarteIstUngueltig {
         log.debug("UiController-menschlicherSpielerSpielt");
 
         informationenSpieler(spiel.getAktiverSpieler(), spiel.getObersteKarteAblagestapel().toString());
@@ -159,16 +156,16 @@ public class UIControllerImpl implements UIControllerService {
             if (karteZiehen) {
                 spielService.kartenAusZiehstapelZiehen(1, spiel);
                 UIView.karteGezogen(spiel.getAktiverSpieler().getName());
-            } else if (spielService.getRegelnwerk().prüfeZweiKartenZiehen(gelegteKarte)) {
+            } else if (spielService.getRegelnwerk().mussKarteZiehen(gelegteKarte)) {
                 spielService.kartenAusZiehstapelZiehen(2, spiel);
                 UIView.mussKartenZiehen(spielerService.getNaechsterSpieler(spiel.getSpieler(), spiel.getAktiverSpieler()).getName(), spiel.getAnzahlKartenZiehen(), "");
             } else if (spielService.getRegelnwerk().spielerAussetzen(gelegteKarte)) {
                 spiel.setNaechsterSpielerMussAussetzen(true);
                 UIView.mussAussetzen(spielerService.getNaechsterSpieler(spiel.getSpieler(), spiel.getAktiverSpieler()).getName());
-            } else if (spielService.getRegelnwerk().prüfeZweiKartenZiehen(gelegteKarte) ) {
+            } else if (spielService.getRegelnwerk().mussKarteZiehen(gelegteKarte) ) {
                 spiel.setNaechsterSpielerMussFarbeWuenschen(true);
                 neueSpielfarbeSetzen();
-            } else if (spielService.getRegelnwerk().prüfeGelegteKarteGueltig(gelegteKarte, spiel.getObersteKarteAblagestapel(), spiel.getSpielfarbe())) {
+            } else if (spielService.getRegelnwerk().ueberpruefenKarte(gelegteKarte, spiel.getObersteKarteAblagestapel(), spiel.getSpielfarbe(), spiel.getAnzahlKartenZiehen())) {
                 List<Karte> ablegestapel = spiel.getAblegestapel();
                 ablegestapel.add(gelegteKarte);
                 spiel.setAblegestapel(ablegestapel);

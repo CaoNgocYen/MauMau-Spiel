@@ -1,14 +1,22 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.impl;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.export.KIService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.entity.Farbe;
-import de.htwberlin.kbe.gruppe7.spielerverwaltung.entity.Spieler;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Wert;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.RegelnService;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class KIServiceImpl implements KIService {
+
+    private RegelnService regelnService;
+
     private static Logger log = LogManager.getLogger();
     private static Random rand = new Random();
     /**
@@ -38,7 +46,7 @@ public class KIServiceImpl implements KIService {
      * @return gewuenschte Farbe
      */
     @Override
-    public Farbe kiWuenschtFarbe() {
+    public Farbe kiWuenschtFarbe(Spieler KI) {
         log.debug("KiVerwaltungImpl-kiWuenschtFarbe");
 
         Farbe gewuenschteFarbe = null;
@@ -60,20 +68,20 @@ public class KIServiceImpl implements KIService {
         return gewuenschteFarbe;
     }
 
-    /**
-     * Methode prüft, ob KI-Spieler "Mau" sagen muss und tut das auch richtig in allen Fällen.
-     * (d.h. in unserem Fall "vergisst" KI-Spieler nie "Mau" zu sagen)
-     *
-     * @param spieler Spieler, der geprüft werden soll
-     * @return boolescher Wert, der angibt, ob der KI-Spieler "Mau" gesagt hat
-     */
     @Override
-    public boolean kiMauPruefung(Spieler spieler) {
-        log.debug("KiVerwaltungImpl-kiMauPruefung");
-
-        if (spieler.getSpielerStapel().size() == 1) {
-            return true;
-        }
-        return false;
+    public boolean kiMauGesagt(Spieler KI) {
+        log.info("{} hat Mau gesagt: ", KI.getName(), KI.getSpielerStapel().size() == 1);
+        return KI.getSpielerStapel().size() == 1;
     }
+
+    @Override
+    public void zuentferndeKarte(Spieler KI, Karte karte) {
+
+    }
+
+    @Override
+    public void zuhinzufuegendeKarten(Spieler KI, List<Karte> karten) {
+
+    }
+
 }

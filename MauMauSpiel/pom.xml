@@ -42,7 +42,24 @@
   </build>
 
   <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.3.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.picocontainer/picocontainer -->
+    <dependency>
+      <groupId>org.picocontainer</groupId>
+      <artifactId>picocontainer</artifactId>
+      <version>2.15</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.8.2</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
@@ -50,17 +67,39 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.2</version>
-      <scope>test</scope>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.17.2</version>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.7.2</version>
-      <scope>test</scope>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.17.2</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.6.1.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.6.1.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.oracle.ojdbc</groupId>
+      <artifactId>ojdbc8</artifactId>
+      <version>19.3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+
   </dependencies>
 
 </project>

@@ -42,7 +42,7 @@ public interface KartenService {
 	 * KarteNichtGefundenException throw exception wenn die Karte kann nicht abgelegt wird
 	 * @return neuer Kartenstapel
 	 */
-	List<Karte> entfernenKarten(List<Karte> kartenStapel, Karte zuEntfernenKarten) throws KarteNichtGefundenException;
+	List<Karte> entfernenKarten(List<Karte> kartenStapel, Karte zuEntfernenKarten);
 
 	/**
 	 * Die Reihenfolge der Objekte in der Liste kartenStapel wird zufaellig festgelegt und zurueckgegeben.
@@ -52,5 +52,9 @@ public interface KartenService {
 	 * @return kartenStapel Gemischter Kartenstapel
 	 */
 	List<Karte> mischenKarten(List<Karte> kartenStapel);
+
+	List<Farbe> getFarben();
+
+	List<Wert> getWerten();
 
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/KartenVerwaltung/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/KartenVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Konfiguration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Konfiguration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RegelnVerwaltung/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RegelnVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpielVerwaltung/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpielVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpielerVerwaltung/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpielerVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VirtuellerSpielerVerwaltung/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VirtuellerSpielerVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ui/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ui/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

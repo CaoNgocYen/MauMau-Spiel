@@ -3,7 +3,6 @@ package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.impl;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KarteNichtGefundenException;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Wert;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 
@@ -11,7 +10,10 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerServ
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Assertions;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class SpielerVerwaltungTest {
@@ -23,8 +25,6 @@ public class SpielerVerwaltungTest {
     private final Karte karte2 = new Karte(Wert.KOENIG, Farbe.KARO);
     private final Karte karte3 = new Karte(Wert.NEUN, Farbe.HERZ);
 
-
-
     @BeforeAll
     public static void initialize(){}
 
@@ -35,7 +35,6 @@ public class SpielerVerwaltungTest {
         handKarten.add(karte2);
         handKarten.add(karte3);
         spieler.setSpielerStapel(handKarten);
-
     }
 
     @Test
@@ -46,19 +45,26 @@ public class SpielerVerwaltungTest {
     }
 
     @Test
-    public void testZiehenKarte(){
-        spielerService.handKarteHinzufuegen(spieler, karte1);
-        handKarten.add(karte1);
-        Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
-
+    public void testhandKarteHinzufuegen(){
+        spieler.setSpielerStapel(handKarten);
+        spielerService.handKarteHinzufuegen(spieler, Arrays.asList(karte1, karte3));
+        Assertions.assertEquals(5, spieler.getSpielerStapel().size());
     }
 
     @Test
-    public void testEntfernenKarte() throws KarteNichtGefundenException {
+    public void testEntfernenKarte() {
         spielerService.handKarteEntfernen(spieler, karte2);
         handKarten.remove(karte2);
         Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
-
     }
+//
+//    @Test
+//    public void testZiehenKarte(){
+//        spielerService.handKarteHinzufuegen(spieler, karte1);
+//        handKarten.add(karte1);
+//        Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
+//
+//    }
+//
 
 }
