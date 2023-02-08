@@ -20,9 +20,9 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class RegelnServiceImpl implements RegelnService {
+public class SondereRegelnServiceImpl implements RegelnService {
 
-	private static Logger logger = LogManager.getLogger(RegelnServiceImpl.class);
+	private static Logger logger = LogManager.getLogger(SondereRegelnServiceImpl.class);
 	@Override
 	public void ueberpruefenKarte(Karte abgelegteKarte , Karte obersteKarte, Farbe Wunschfarbe, int anzahlZuziehendeKarten) throws AbgelegteKarteIstUngueltig {
 		Farbe abgelegteFarbe = abgelegteKarte.getFarbe();
@@ -50,7 +50,7 @@ public class RegelnServiceImpl implements RegelnService {
 	}
 	@Override
 	public boolean spielerAussetzen(Karte obersteKarte) {
-		return obersteKarte.getFarbe().equals(Farbe.PIK);
+		return obersteKarte.getWert().equals(Wert.ASS);
 	}
 
 	@Override

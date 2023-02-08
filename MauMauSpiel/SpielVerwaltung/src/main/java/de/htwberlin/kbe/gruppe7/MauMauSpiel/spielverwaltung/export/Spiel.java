@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Spiel {
     private Long id;
+    private List<Spieler> spielerListe;
     private Spieler aktiverSpieler;
     private int spielrunde;
     private int anzahlKartenZiehen;
@@ -17,7 +18,7 @@ public class Spiel {
     private boolean erfolgreicheAblage;
     private boolean spielrichtungRechts;
     private String siegername;
-    private List<Spieler> spieler;
+
     private List<Karte> ziehstapel;
     private List<Karte> ablegestapel;
     private Farbe spielfarbe;
@@ -26,15 +27,15 @@ public class Spiel {
     /** Konstruktor einer Spielinstanz.
      *
      * @param id           Aktuelle ID des Spiels
-     * @param spieler      Lister aller teilnehmenden Spieler
+     * @param spielerListe      Lister aller teilnehmenden Spieler
      * @param ziehstapel   Liste von Karten zum Ziehen
      * @param ablegestapel Liste von Karten zum Ablegen
      * @param spielrunde   Spielrunde
      */
 
-    public Spiel(Long id, List<Spieler> spieler, List<Karte> ziehstapel, List<Karte> ablegestapel, int spielrunde) {
+    public Spiel(Long id, List<Spieler> spielerListe, List<Karte> ziehstapel, List<Karte> ablegestapel, int spielrunde) {
         this.id = id;
-        this.spieler = spieler;
+        this.spielerListe = spielerListe;
         this.ziehstapel = ziehstapel;
         this.ablegestapel = ablegestapel;
         this.spielrunde = spielrunde;
@@ -73,16 +74,16 @@ public class Spiel {
      *
      * @return Liste aller Spieler
      */
-    public List<Spieler> getSpieler() {
-        return spieler;
+    public List<Spieler> getSpielerListe() {
+        return spielerListe;
     }
 
     /** Setzt die Spieler.
      *
-     * @param spieler Liste aller Spieler
+     * @param spielerListe Liste aller Spieler
      */
-    public void setSpieler(List<Spieler> spieler) {
-        this.spieler = spieler;
+    public void setSpielerListe(List<Spieler> spielerListe) {
+        this.spielerListe = spielerListe;
     }
 
     /** Gibt den aktuellen Ziehstapel zurueck.

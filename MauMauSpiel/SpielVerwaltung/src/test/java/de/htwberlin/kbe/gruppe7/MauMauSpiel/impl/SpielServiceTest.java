@@ -70,7 +70,7 @@ public class SpielServiceTest {
         spiel.setAktiverSpieler(alex);
         spiel.setSpielrichtungRechts(true);
         spiel.setSpielfarbe(Farbe.HERZ);
-        spiel.setSpieler(spielerList);
+        spiel.setSpielerListe(spielerList);
 
     }
 

@@ -4,7 +4,6 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.export.KIService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.exception.AbgelegteKarteIstUngueltig;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.SpielService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.export.UIControllerService;
@@ -43,7 +42,6 @@ public class UIControllerImpl implements UIControllerService {
         this.UIView = UIView;
     }
 
-
     @Override
     public void run() {
         log.debug("UI Controller -run");
@@ -52,7 +50,7 @@ public class UIControllerImpl implements UIControllerService {
         boolean spielAbbruchVorBeginn = false;
         switch (startMenuChoice){
             case 1 :
-                spiel =neuesSpielErzeugen();
+                spiel = neuesSpielErzeugen();
                 break;
             case 2 :
                 spiel = loadGame();
@@ -108,7 +106,7 @@ public class UIControllerImpl implements UIControllerService {
     /**
      * Hier wird die Interaktion mit dem "echten" Spieler gesteuert.
      */
-    private void menschlicherSpielzug() throws AbgelegteKarteIstUngueltig {
+    private void menschlicherSpielzug() {
         log.debug("UiController-menschlicherSpielerSpielt");
 
         informationenSpieler(spiel.getAktiverSpieler(), spiel.getObersteKarteAblagestapel().toString());
@@ -158,18 +156,19 @@ public class UIControllerImpl implements UIControllerService {
                 UIView.karteGezogen(spiel.getAktiverSpieler().getName());
             } else if (spielService.getRegelnwerk().mussKarteZiehen(gelegteKarte)) {
                 spielService.kartenAusZiehstapelZiehen(2, spiel);
-                UIView.mussKartenZiehen(spielerService.getNaechsterSpieler(spiel.getSpieler(), spiel.getAktiverSpieler()).getName(), spiel.getAnzahlKartenZiehen(), "");
+                UIView.mussKartenZiehen(spielerService.getNaechsterSpieler(spiel.getSpielerListe(), spiel.getAktiverSpieler()).getName(), spiel.getAnzahlKartenZiehen(), "");
             } else if (spielService.getRegelnwerk().spielerAussetzen(gelegteKarte)) {
                 spiel.setNaechsterSpielerMussAussetzen(true);
-                UIView.mussAussetzen(spielerService.getNaechsterSpieler(spiel.getSpieler(), spiel.getAktiverSpieler()).getName());
+                UIView.mussAussetzen(spielerService.getNaechsterSpieler(spiel.getSpielerListe(), spiel.getAktiverSpieler()).getName());
             } else if (spielService.getRegelnwerk().mussKarteZiehen(gelegteKarte) ) {
                 spiel.setNaechsterSpielerMussFarbeWuenschen(true);
                 neueSpielfarbeSetzen();
-            } else if (spielService.getRegelnwerk().ueberpruefenKarte(gelegteKarte, spiel.getObersteKarteAblagestapel(), spiel.getSpielfarbe(), spiel.getAnzahlKartenZiehen())) {
-                List<Karte> ablegestapel = spiel.getAblegestapel();
-                ablegestapel.add(gelegteKarte);
-                spiel.setAblegestapel(ablegestapel);
             }
+//            else if (spielService.getRegelnwerk().ueberpruefenKarte(gelegteKarte, spiel.getObersteKarteAblagestapel(), spiel.getSpielfarbe(), spiel.getAnzahlKartenZiehen())) {
+//                List<Karte> ablegestapel = spiel.getAblegestapel();
+//                ablegestapel.add(gelegteKarte);
+//                spiel.setAblegestapel(ablegestapel);
+//            }
 
             if (spielService.pruefeAufMau(spiel.getAktiverSpieler())) {
                 spielService.kartenAusZiehstapelZiehen(1, spiel);
@@ -321,7 +320,6 @@ public class UIControllerImpl implements UIControllerService {
         return spielerNamen;
     }
 
-
     /**
      * Methode steuert die Hauptmenü-Punkte des Spiels.
      * @param eingabe der ausgewählte Menüpunkt
@@ -374,7 +372,6 @@ public class UIControllerImpl implements UIControllerService {
 
     }
 
-
     /**
      * Methode liest eine Zahl über die Tastatur ein und wählt den Menüpunkt der Zahl entsprechend aus.
      * @param min - kleinste Zahl, die der Nutzer eingeben darf
@@ -390,7 +387,6 @@ public class UIControllerImpl implements UIControllerService {
         }
         return auswahl;
     }
-
     /**
      * Laesst den Spieler eine Zahl über die Tastatur eingeben.
      * Falls keine Zahl eingegeben, wird der Spieler solange erneut aufgefordert, bis er eine Zahl eingibt.
@@ -415,12 +411,10 @@ public class UIControllerImpl implements UIControllerService {
 
         return eingabe;
     }
-
     public void beenden (){
         log.debug("UI Controller beenden");
         System.exit(0);
     }
-
     private Spiel loadGame() {
         //TODO:
         return spiel;
@@ -429,7 +423,6 @@ public class UIControllerImpl implements UIControllerService {
         //TODO:
         return spiel;
     }
-
     private Spiel neuesSpielErzeugen() {
         //TODO:
         log.debug("UI Controller SpielErzeugen");
@@ -452,8 +445,8 @@ public class UIControllerImpl implements UIControllerService {
                 neuerSppieler.setVirtuellerSpieler(true);
             spielerList.add(neuerSppieler);
         }
-        spiel.setSpieler(spielerList);
-        spiel.setAktiverSpieler(spiel.getSpieler().get(0));
+        spiel.setSpielerListe(spielerList);
+        spiel.setAktiverSpieler(spiel.getSpielerListe().get(0));
         spiel.setZiehstapel(kartenService.anlegenStapel(anzahlKarten));
         ersteZiehkarte.add(spiel.getZiehstapel().get(spiel.getZiehstapel().size()-1));
         spiel.getZiehstapel().remove(spiel.getZiehstapel().size()-1);
@@ -462,8 +455,6 @@ public class UIControllerImpl implements UIControllerService {
         spielService.getRegelnwerk();
         spiel.setId(spielID);
         UIView.anzeigeSpielID(spielID.toString());
-
-
         return spiel;
     }
     private int anzahlSpieler(){
@@ -476,6 +467,4 @@ public class UIControllerImpl implements UIControllerService {
         }
         return anzahl;
     }
-
-
 }

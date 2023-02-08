@@ -15,7 +15,6 @@ import java.util.List;
 
 public interface KartenService {
 
-
 	Karte anlegenKarte(Wert wert, Farbe farbe);
 
 	/**

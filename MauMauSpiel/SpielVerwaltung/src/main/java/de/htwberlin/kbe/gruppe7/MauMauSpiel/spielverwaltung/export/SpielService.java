@@ -89,4 +89,6 @@ public interface SpielService {
      * @return Das neue Spielobjekt
      */
     Spiel richtungswechselAusfuehren(Spiel spiel);
+
+
 }
