@@ -46,7 +46,7 @@ public class UIControllerImpl implements UIControllerService {
 
     @Override
     public void run() throws TechnischeExeption {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("file:~/h2/MauMau-Spiel");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("maumauspiel");
         EntityManager em = entityManagerFactory.createEntityManager();
         log.debug("UI Controller -run");
         UIView.willkommen();
