@@ -2,6 +2,7 @@ package de.htwberlin.kbe.gruppe7.MauMauSpiel.konfiguration;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.export.KIService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.impl.KIServiceImpl;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.exceptionservice.TechnischeExeption;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.impl.KartenServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.SondereRegelnServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.impl.StandardRegelnServiceImpl;
@@ -18,7 +19,8 @@ import org.picocontainer.injectors.ConstructorInjection;
 public class Konfig {
     private static MutablePicoContainer container = new DefaultPicoContainer(new ConstructorInjection());
 
-    public static void main(String[] arg) {
+    public static void main(String[] arg) throws TechnischeExeption {
+
         registriereKomponenten();
         container.getComponent(UIControllerService.class).run();
     }
