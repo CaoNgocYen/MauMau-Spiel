@@ -1,9 +1,12 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 
+import javax.persistence.Embeddable;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Embeddable
 public class Spieler {
 
 	private String name;

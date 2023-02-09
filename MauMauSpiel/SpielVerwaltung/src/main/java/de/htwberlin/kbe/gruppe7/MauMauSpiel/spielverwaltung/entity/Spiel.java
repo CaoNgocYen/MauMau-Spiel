@@ -1,12 +1,18 @@
-package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export;
+package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import java.util.List;
 
+@Entity
 public class Spiel {
+
     private Long id;
     private List<Spieler> spielerListe;
     private Spieler aktiverSpieler;
@@ -58,6 +64,8 @@ public class Spiel {
      * @return id
      */
 
+    @Id
+    @GeneratedValue
     public Long getId() {
         return id;
     }
