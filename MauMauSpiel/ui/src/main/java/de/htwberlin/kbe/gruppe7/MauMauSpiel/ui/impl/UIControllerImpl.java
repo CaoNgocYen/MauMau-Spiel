@@ -4,7 +4,7 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.KIService.export.KIService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.SpielService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.export.UIControllerService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.view.UIView;
@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import javax.persistence.*;
 
 
 public class UIControllerImpl implements UIControllerService {
@@ -31,7 +32,7 @@ public class UIControllerImpl implements UIControllerService {
     private List<String> spielerNamen;
     private final int anzahlKarten =32;
     private boolean spielWurdeAbgebrochen;
-    private final Long spielID =1L;
+    private  Long spielID =1L;
 
     public UIControllerImpl(SpielService spielService, SpielerService spielerService, KartenService kartenService,
                             KIService kiService, UIView UIView){
@@ -44,16 +45,18 @@ public class UIControllerImpl implements UIControllerService {
 
     @Override
     public void run() {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("file:~/h2/MauMau-Spiel");
+        EntityManager em = entityManagerFactory.createEntityManager();
         log.debug("UI Controller -run");
         UIView.willkommen();
         int startMenuChoice  = hauptmenuKontroller(menuPunktAuswaehlen(1,3));
         boolean spielAbbruchVorBeginn = false;
         switch (startMenuChoice){
             case 1 :
-                spiel = neuesSpielErzeugen();
+                spiel = neuesSpielErzeugen(em);
                 break;
             case 2 :
-                spiel = loadGame();
+                spiel = loadGame(em);
                 break;
             case 3 :
                 spielAbbruchVorBeginn = true;
@@ -117,7 +120,6 @@ public class UIControllerImpl implements UIControllerService {
         boolean mauMauGesagt = false;
         boolean karteZiehen = false;
         spielWurdeAbgebrochen = false;
-        int whileCounter = 0;
 
         while (!spielWurdeAbgebrochen) {
             try {
@@ -396,7 +398,7 @@ public class UIControllerImpl implements UIControllerService {
     public int zahlenEingabe() {
         log.debug("UiController-zahlenEingabe");
         int eingabe = 0;
-        boolean fehler = false;
+        boolean fehler;
         do {
             try {
 
@@ -415,15 +417,62 @@ public class UIControllerImpl implements UIControllerService {
         log.debug("UI Controller beenden");
         System.exit(0);
     }
-    private Spiel loadGame() {
+
+    private EntityManager begin (EntityManager em){
+        log.debug("UIController - begin");
+        try{
+            em.getTransaction().begin();
+
+        }catch (Exception e){
+            log.debug("Datenbankfehler : ");
+        }
+        return em;
+    }
+
+
+    private Spiel loadGame(EntityManager em) {
         //TODO:
+        log.debug("UIController-LoadGame");
+        boolean spielNichtGefunden = true;
+        while (spielNichtGefunden){
+            try{
+                UIView.frageNachSpielID();
+                int spielId = zahlenEingabe();
+                TypedQuery<Spiel> findGame = em.createQuery("SELECT g from Spiel g where id = "+ spielId, Spiel.class);
+                spiel = findGame.getSingleResult();
+
+                if(spiel.getSiegername()==null)
+                    spielNichtGefunden = false;
+                else
+                    UIView.spielfortsetzungUnmöglich();
+            }catch (javax.persistence.NoResultException idNotFound){
+                try{
+                    TypedQuery<Long> lastId = em.createQuery("SELECT MAX(g.id) from Spiel g ", Long.class);
+                    UIView.keinSpielGefunden(lastId.getSingleResult().toString());
+
+                }catch (javax.persistence.NoResultException zeroGamesfound){
+                    UIView.keinSpielVorhanden();
+                }catch (Exception e){
+                    log.debug("DatenbankFehler: Spiel konnte nicht geladen werden");
+                }
+            }
+        }
         return spiel;
     }
-    private Spiel saveGame() {
+    private EntityManager saveGame(Spiel spielinstanz, EntityManager em)  {
         //TODO:
-        return spiel;
+        log.debug("UIController-savegame");
+        try{
+            em.persist(spielinstanz);
+            em.getTransaction().commit();
+            UIView.spielErfolgreichGespeichert();
+        }catch (Exception e){
+            em.getTransaction().rollback();
+            log.debug("DatenbankFehler: Speichern nicht moeglich! Weitere Infos "+ e.getMessage() );
+        }
+        return em;
     }
-    private Spiel neuesSpielErzeugen() {
+    private Spiel neuesSpielErzeugen(EntityManager em) {
         //TODO:
         log.debug("UI Controller SpielErzeugen");
         spiel = new Spiel();
@@ -452,9 +501,26 @@ public class UIControllerImpl implements UIControllerService {
         spiel.getZiehstapel().remove(spiel.getZiehstapel().size()-1);
         spiel.setAblegestapel(ersteZiehkarte);
         spiel.setZiehstapel(spielService.fuenfKartenAusteilen(spiel.getZiehstapel(),spielerList));
-        spielService.getRegelnwerk();
+        spielService.setRegelnwerk(regelnModusAuswaehlen());
+
+        try{
+            em= begin(em);
+            TypedQuery<Long> findLatestId = em.createQuery("SELECT MAX(g.id) from Spiel g", Long.class);
+            Long latestId = findLatestId.getSingleResult();
+            spielID = latestId +1;
+
+        }catch (NullPointerException | PersistenceException e){
+            spielID = 1L;
+        }catch (Exception e){
+            log.debug("DatenbankFehler: ");
+        }
+
+
+
+
         spiel.setId(spielID);
         UIView.anzeigeSpielID(spielID.toString());
+        em = saveGame(spiel, em);
         return spiel;
     }
     private int anzahlSpieler(){
@@ -466,5 +532,28 @@ public class UIControllerImpl implements UIControllerService {
             anzahl = zahlenEingabe();
         }
         return anzahl;
+    }
+    /**
+     * Fragt nach den Standardregeln.
+     * @return - bool. Wert für die Standardregeln
+     */
+    private boolean regelnModusAuswaehlen() {
+        log.debug("UiController-regelnModusAuswaehlen");
+        UIView.frageRegelwerk();
+        int eingabe4 = menuPunktAuswaehlen(1, 2);
+
+        if (eingabe4 == 1) {
+            UIView.zeigeAuswahlRegelStandard();
+            return true;
+        }
+        else if (eingabe4 == 2) {
+            UIView.zeigeAuswahlRegelErweitert();
+            return false;
+        }
+        else {
+            UIView.zeigeAuswahlRegelStandard();
+            return true;
+        }
+
     }
 }

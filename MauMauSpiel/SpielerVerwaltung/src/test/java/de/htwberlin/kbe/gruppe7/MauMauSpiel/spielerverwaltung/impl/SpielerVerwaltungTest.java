@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class SpielerVerwaltungTest {
@@ -57,14 +56,14 @@ public class SpielerVerwaltungTest {
         handKarten.remove(karte2);
         Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
     }
-//
-//    @Test
-//    public void testZiehenKarte(){
-//        spielerService.handKarteHinzufuegen(spieler, karte1);
-//        handKarten.add(karte1);
-//        Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
-//
-//    }
-//
+
+    @Test
+    public void testZiehenKarte(){
+        spielerService.handKarteHinzufuegen(spieler, (List<Karte>) karte1);
+        handKarten.add(karte1);
+        Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
+
+    }
+
 
 }

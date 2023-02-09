@@ -3,7 +3,7 @@ package de.htwberlin.kbe.gruppe7.MauMauSpiel.impl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Wert;
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl.SpielServiceImpl;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.KartenService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.regelnverwaltung.export.RegelnService;

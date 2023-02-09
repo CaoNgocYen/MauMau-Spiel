@@ -1,6 +1,6 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl;
 
-import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.SpielService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
