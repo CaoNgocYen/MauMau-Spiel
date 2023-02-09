@@ -18,5 +18,8 @@
         <module name="SpielVerwaltung" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Exceptions" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
