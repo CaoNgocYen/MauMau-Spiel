@@ -20,6 +20,7 @@
     <module>VirtuellerSpielerVerwaltung</module>
       <module>Konfiguration</module>
       <module>ui</module>
+    <module>ExceptionService</module>
   </modules>
 
   <properties>

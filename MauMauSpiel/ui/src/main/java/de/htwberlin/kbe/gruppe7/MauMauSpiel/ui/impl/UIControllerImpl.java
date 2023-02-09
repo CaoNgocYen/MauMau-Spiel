@@ -10,6 +10,7 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.export.UIControllerService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.ui.view.UIView;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerService;
+import de.htwberlin.kbe.gruppe7.MauMauSpiel.exceptionservice.TechnischeExeption;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class UIControllerImpl implements UIControllerService {
     }
 
     @Override
-    public void run() {
+    public void run() throws TechnischeExeption {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("file:~/h2/MauMau-Spiel");
         EntityManager em = entityManagerFactory.createEntityManager();
         log.debug("UI Controller -run");
@@ -62,7 +63,7 @@ public class UIControllerImpl implements UIControllerService {
                 spielAbbruchVorBeginn = true;
                 break;
             default:
-                System.out.println("Spiel konnte nicht gestartet werden");
+              throw new TechnischeExeption("Spiel konnte nicht gestartet werden");
         }
         if (!spielAbbruchVorBeginn)
             spielablauf(spiel);
@@ -418,19 +419,19 @@ public class UIControllerImpl implements UIControllerService {
         System.exit(0);
     }
 
-    private EntityManager begin (EntityManager em){
+    private EntityManager begin (EntityManager em) throws TechnischeExeption {
         log.debug("UIController - begin");
         try{
             em.getTransaction().begin();
 
         }catch (Exception e){
-            log.debug("Datenbankfehler : ");
+            throw new TechnischeExeption ("Datenbankfehler : "+ e.getMessage());
         }
         return em;
     }
 
 
-    private Spiel loadGame(EntityManager em) {
+    private Spiel loadGame(EntityManager em) throws TechnischeExeption {
         //TODO:
         log.debug("UIController-LoadGame");
         boolean spielNichtGefunden = true;
@@ -453,13 +454,13 @@ public class UIControllerImpl implements UIControllerService {
                 }catch (javax.persistence.NoResultException zeroGamesfound){
                     UIView.keinSpielVorhanden();
                 }catch (Exception e){
-                    log.debug("DatenbankFehler: Spiel konnte nicht geladen werden");
+                    throw new TechnischeExeption ("DatenbankFehler: Spiel konnte nicht geladen werden");
                 }
             }
         }
         return spiel;
     }
-    private EntityManager saveGame(Spiel spielinstanz, EntityManager em)  {
+    private EntityManager saveGame(Spiel spielinstanz, EntityManager em) throws TechnischeExeption  {
         //TODO:
         log.debug("UIController-savegame");
         try{
@@ -468,11 +469,11 @@ public class UIControllerImpl implements UIControllerService {
             UIView.spielErfolgreichGespeichert();
         }catch (Exception e){
             em.getTransaction().rollback();
-            log.debug("DatenbankFehler: Speichern nicht moeglich! Weitere Infos "+ e.getMessage() );
+            throw new TechnischeExeption ("DatenbankFehler: Speichern nicht moeglich! Weitere Infos "+ e.getMessage() );
         }
         return em;
     }
-    private Spiel neuesSpielErzeugen(EntityManager em) {
+    private Spiel neuesSpielErzeugen(EntityManager em) throws TechnischeExeption {
         //TODO:
         log.debug("UI Controller SpielErzeugen");
         spiel = new Spiel();
@@ -512,7 +513,7 @@ public class UIControllerImpl implements UIControllerService {
         }catch (NullPointerException | PersistenceException e){
             spielID = 1L;
         }catch (Exception e){
-            log.debug("DatenbankFehler: ");
+           throw new TechnischeExeption("DatenbankFehler: ");
         }
 
 
