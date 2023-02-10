@@ -12,7 +12,6 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerService;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.exceptionservice.TechnischeExeption;
 import de.htwberlin.kbe.gruppe7.export.Stapel;
-import de.htwberlin.kbe.gruppe7.export.StapelService;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import java.util.ArrayList;
@@ -29,13 +28,11 @@ public class UIControllerImpl implements UIControllerService {
     private final SpielerService spielerService;
     private final SpielService spielService;
     private final KartenService kartenService;
-    private final StapelService stapelService;
     private final KIService kiService;
     private final UIView UIView;
     private Spiel spiel;
     private List<String> spielerNamen;
     private final int anzahlKarten =32;
-    private Stapel stapel;
     private boolean spielWurdeAbgebrochen;
     private  Long spielID =1L;
 
@@ -67,7 +64,7 @@ public class UIControllerImpl implements UIControllerService {
                 spielAbbruchVorBeginn = true;
                 break;
             default:
-              throw new TechnischeExeption("Spiel konnte nicht gestartet werden");
+                throw new TechnischeExeption("Spiel konnte nicht gestartet werden");
         }
         if (!spielAbbruchVorBeginn)
             spielablauf(spiel);
@@ -97,7 +94,8 @@ public class UIControllerImpl implements UIControllerService {
 
             if(!spielWurdeAbgebrochen) {
                 // Prüfe auf Spielende
-                spielAktiv = !spielService.istSpielAngeschlossen(spiel);
+                //spielAktiv = !spielService.pruefeAufSpielende(spielinstanz.getAktiverSpieler());
+                spielAktiv = !spielService.istSpielAbgeschlossen(spiel);
                 if (!spielAktiv) {
                     UIView.gewonnen(spielinstanz.getAktiverSpieler().getName());
                     spielinstanz.setSiegername(spielinstanz.getAktiverSpieler().getName());
@@ -105,7 +103,7 @@ public class UIControllerImpl implements UIControllerService {
                 }
                 // Setze Spielindex hoch
                 spielinstanz.setSpielrunde(spielinstanz.getSpielrunde() + 1);
-                //spielService.setzeNaechstenSpieler(spielinstanz, spielinstanz.isNaechsterSpielerMussAussetzen());
+                spielService.setzeNaechstenSpieler(spielinstanz, spielinstanz.isNaechsterSpielerMussAussetzen());
                 spielinstanz.setNaechsterSpielerMussAussetzen(false);
             }
 
@@ -117,7 +115,7 @@ public class UIControllerImpl implements UIControllerService {
     private void menschlicherSpielzug() {
         log.debug("UiController-menschlicherSpielerSpielt");
 
-        informationenSpieler(spiel.getAktiverSpieler(), stapel.getObersteKarteAblagestapel().toString());
+        informationenSpieler(spiel.getAktiverSpieler(), spiel.getObersteKarteAblagestapel().toString());
         UIView.welcheKarte();
 
         Karte gelegteKarte = null;
@@ -182,7 +180,7 @@ public class UIControllerImpl implements UIControllerService {
                 UIView.mussKartenZiehen(spiel.getAktiverSpieler().getName(), 1, " da er nicht 'Mau' gesagt hat");
             }
 
-            spiel.setSpielfarbe(spiel.getAblegestapel().get(spiel.getAblegestapel().size() - 1).getFarbe());
+            spiel.setSpielfarbe(spiel.getAblegeStapel().get(spiel.getAblegeStapel().size() - 1).getFarbe());
 
         }
     }
@@ -501,11 +499,11 @@ public class UIControllerImpl implements UIControllerService {
         }
         spiel.setSpielerListe(spielerList);
         spiel.setAktiverSpieler(spiel.getSpielerListe().get(0));
-        spiel.setZiehstapel(kartenService.anlegenStapel(anzahlKarten));
-        ersteZiehkarte.add(spiel.getZiehstapel().get(spiel.getZiehstapel().size()-1));
-        spiel.getZiehstapel().remove(spiel.getZiehstapel().size()-1);
-        spiel.setAblegestapel(ersteZiehkarte);
-        spiel.setZiehstapel(spielService.fuenfKartenAusteilen(spiel.getZiehstapel(),spielerList));
+        spiel.setZiehStapel((Stapel) kartenService.anlegenStapel(anzahlKarten));
+        ersteZiehkarte.add(spiel.getZiehKarten().get(spiel.getZiehKarten().size()-1));
+        spiel.getZiehKarten().remove(spiel.getZiehKarten().size()-1);
+        spiel.setAblegeStapel(ersteZiehkarte);
+        spiel.setZiehStapel((Stapel) spielService.fuenfKartenAusteilen(spiel.getZiehKarten(),spielerList));
         spielService.setRegelnwerk(regelnModusAuswaehlen());
 
         try{
@@ -517,11 +515,8 @@ public class UIControllerImpl implements UIControllerService {
         }catch (NullPointerException | PersistenceException e){
             spielID = 1L;
         }catch (Exception e){
-           throw new TechnischeExeption("DatenbankFehler: ");
+            throw new TechnischeExeption("DatenbankFehler: ");
         }
-
-
-
 
         spiel.setId(spielID);
         UIView.anzeigeSpielID(spielID.toString());

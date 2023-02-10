@@ -47,7 +47,7 @@ public class SpielServiceImpl implements SpielService {
 
     @Override
     public void handkartenHandeln(Spiel spiel) {
-        Stapel stapel = spiel.getZiehstapel();
+        Stapel stapel = spiel.getZiehStapel();
         for (Spieler spieler : spiel.getSpielerListe()) {
             if (spieler.isVirtuellerSpieler()) {
                 kiService.kartenHinzufuegen(spieler, stapelService.spielerHandkartenHandeln(stapel));
@@ -61,7 +61,7 @@ public class SpielServiceImpl implements SpielService {
 
     @Override
     public void naechsterSpielerWechseln(Spiel spiel) {
-        spiel.setAktiverSpieler(getNextActivePlayer(spiel));
+        spiel.setAktiverSpieler(getNaeschterSpieler(spiel));
         if (spiel.getAktiverSpieler().isMussAussetzen()) {
             spiel.getAktiverSpieler().setMussAussetzen(false);
             naechsterSpielerWechseln(spiel);
@@ -69,7 +69,7 @@ public class SpielServiceImpl implements SpielService {
         logger.info("Der aktiver Spieler ist: {}", spiel.getAktiverSpieler());
     }
 
-    private Spieler getNextActivePlayer(Spiel spiel) {
+    private Spieler getNaeschterSpieler(Spiel spiel) {
         Spieler aktiverSpieler = spiel.getAktiverSpieler();
         List<Spieler> spielerListe = spiel.getSpielerListe();
         int idxActivePlayer = spielerListe.indexOf(aktiverSpieler);
@@ -94,7 +94,7 @@ public class SpielServiceImpl implements SpielService {
     public void mussKartenZiehen(int numberOfDrawnCards, Spiel spiel) {
         Spieler aktiverSpieler = spiel.getAktiverSpieler();
         logger.info("Spieler {} muss {} Karten ziehen", aktiverSpieler.getName(), numberOfDrawnCards);
-        List<Karte> drawCards = stapelService.kartenAusZiehstapelZiehen(spiel.getZiehstapel(), numberOfDrawnCards);
+        List<Karte> drawCards = stapelService.kartenAusZiehstapelZiehen(spiel.getZiehStapel(), numberOfDrawnCards);
 
         if (aktiverSpieler.isVirtuellerSpieler()) {
             kiService.kartenHinzufuegen(aktiverSpieler, drawCards);
@@ -115,7 +115,7 @@ public class SpielServiceImpl implements SpielService {
     @Override
     public boolean darfKartenZiehen(Spiel spiel) {
         Spieler activePlayer = spiel.getAktiverSpieler();
-        return regelnService.mussKarteZiehen(activePlayer, spiel.getZiehstapel().getObersteKarte(), spiel.getAnzahlKartenZiehen());
+        return regelnService.mussKarteZiehen(activePlayer, spiel.getZiehStapel().getObersteKarte(), spiel.getAnzahlKartenZiehen());
     }
 
     @Override
@@ -127,7 +127,7 @@ public class SpielServiceImpl implements SpielService {
 
     @Override
     public void ueberpruefenKarte(Karte karte, Spiel spiel) throws AbgelegteKarteIstUngueltig {
-        Stapel stapel = spiel.getZiehstapel();
+        Stapel stapel = spiel.getZiehStapel();
         Karte topCard = stapel.getObersteKarte();
         regelnService.ueberpruefenKarte(karte, topCard, spiel.getWunschFarbe(), spiel.getAnzahlKartenZiehen());
         stapelService.karteZuObersteKarteSetzen(stapel, karte);
@@ -146,7 +146,7 @@ public class SpielServiceImpl implements SpielService {
 
     @Override
     public void regelnAnwenden(Spiel spiel) {
-        Karte obersteKarte = spiel.getZiehstapel().getObersteKarte();
+        Karte obersteKarte = spiel.getZiehStapel().getObersteKarte();
         if (regelnService.mussKarteZiehen(obersteKarte)) {
             spiel.straffkartenErhoehen();
             logger.info("Die Kartenanzahl wird um {} erhöht", spiel.getAnzahlKartenZiehen());
@@ -173,14 +173,14 @@ public class SpielServiceImpl implements SpielService {
             spiel.getAktiverSpieler().setMussAussetzen(true);
             logger.info("Spieler {} muss in der aktuellen Runde aussetzen", spiel.getAktiverSpieler().getName());
         } else {
-            Spieler nextPlayer = getNextActivePlayer(spiel);
+            Spieler nextPlayer = getNaeschterSpieler(spiel);
             nextPlayer.setMussAussetzen(true);
             logger.info("Spieler {} muss in der nächsten Runde aussetzend", nextPlayer.getName());
         }
     }
 
     @Override
-    public boolean istSpielAngeschlossen(Spiel spiel) {
+    public boolean istSpielAbgeschlossen(Spiel spiel) {
         return spiel.getAktiverSpieler().getSpielerStapel().size() == 0;
     }
 
@@ -217,5 +217,52 @@ public class SpielServiceImpl implements SpielService {
     public Spiel getSavedGame(long id) throws DaoException {
         return spielDao.findById(id);
     }
+
+    @Override
+    public Spiel kartenAusZiehstapelZiehen(int anzahl, Spiel spiel) {
+        return null;
+    }
+
+    @Override
+    public Spiel legeKarte(Spiel spiel, Karte abgelegteKarte, Spieler spieler) {
+        return null;
+    }
+
+    @Override
+    public Spiel aktuelleFarbe(Farbe farbe, Spiel spiel) {
+        return null;
+    }
+
+    @Override
+    public boolean pruefeAufSpielende(Spieler spieler) {
+        return false;
+    }
+
+    @Override
+    public Spiel setzeNaechstenSpieler(Spiel spiel, boolean spielerUeberspringen) {
+        return null;
+    }
+
+    @Override
+    public boolean pruefeAufMau(Spieler spieler) {
+        return false;
+    }
+
+
+    @Override
+    public List<Karte> fuenfKartenAusteilen(List<Karte> ziehstapel, List<Spieler> spielerListe) {
+        return null;
+    }
+
+    @Override
+    public RegelnService getRegelnwerk() {
+        return null;
+    }
+
+    @Override
+    public void setRegelnwerk(boolean standardRegeln) {
+
+    }
+
 
 }

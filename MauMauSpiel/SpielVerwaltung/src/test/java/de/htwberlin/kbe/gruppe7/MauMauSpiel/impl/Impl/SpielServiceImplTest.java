@@ -25,7 +25,6 @@ import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.SpielerServ
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.DAO.SpielDao;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export.Spiel;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.impl.SpielServiceImpl;
-import de.htwberlin.kbe.gruppe7.exceptions.IllegelStapelGroesseException;
 import de.htwberlin.kbe.gruppe7.export.StapelService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -80,7 +79,7 @@ class SpielServiceImplTest {
         Karte gelegteKarte = new Karte(Wert.SIEBEN, Farbe.KREUZ);
         Farbe wunschFarbe = Farbe.KREUZ;
         spiel.setWunschFarbe(wunschFarbe);
-        spiel.getZiehstapel().setObersteKarte(expectedTopCard);
+        spiel.getZiehStapel().setObersteKarte(expectedTopCard);
         doNothing().when(spielerService).handKarteEntfernen(spiel.getAktiverSpieler(), gelegteKarte);
 
         spielService.ueberpruefenKarte(gelegteKarte, spiel);
@@ -94,7 +93,7 @@ class SpielServiceImplTest {
         );
 
         verify(stapelService).karteZuObersteKarteSetzen(
-                argThat(deck -> deck.equals(spiel.getZiehstapel())),
+                argThat(deck -> deck.equals(spiel.getZiehStapel())),
                 argThat(card -> card.equals(gelegteKarte))
         );
         verify(spielerService).handKarteEntfernen(
@@ -111,7 +110,7 @@ class SpielServiceImplTest {
         Karte gelegteKarte = new Karte(Wert.SIEBEN, Farbe.KREUZ);
         Farbe wunschFarbe = Farbe.KREUZ;
         spiel.setWunschFarbe(wunschFarbe);
-        spiel.getZiehstapel().setObersteKarte(expectedTopCard);
+        spiel.getZiehStapel().setObersteKarte(expectedTopCard);
         doNothing().when(kiService).karteEntfernen(spiel.getAktiverSpieler(), gelegteKarte);
 
         spielService.ueberpruefenKarte(gelegteKarte, spiel);
@@ -125,7 +124,7 @@ class SpielServiceImplTest {
         );
 
         verify(stapelService).karteZuObersteKarteSetzen(
-                argThat(deck -> deck.equals(spiel.getZiehstapel())),
+                argThat(deck -> deck.equals(spiel.getZiehStapel())),
                 argThat(card -> card.equals(gelegteKarte))
         );
         verify(kiService).karteEntfernen(
@@ -139,7 +138,7 @@ class SpielServiceImplTest {
     @DisplayName("sollte die Regel \"Bube auf Bube\" anwenden")
     public void applyIsCardJackRule() {
         Karte obersteKarte = new Karte(Wert.BUBE, Farbe.KREUZ);
-        spiel.getZiehstapel().setObersteKarte(obersteKarte);
+        spiel.getZiehStapel().setObersteKarte(obersteKarte);
         when(regelnService.istBudeKarte(any())).thenReturn(true);
 
         spielService.regelnAnwenden(spiel);
@@ -158,7 +157,7 @@ class SpielServiceImplTest {
         spielService.mussKartenZiehen(2, spiel);
 
         verify(stapelService).kartenAusZiehstapelZiehen(argThat(
-                        deck -> deck.equals(spiel.getZiehstapel())),
+                        deck -> deck.equals(spiel.getZiehStapel())),
                 intThat(numberOfDrawnCards -> numberOfDrawnCards == 2)
         );
         verify(spielerService).handKarteHinzufuegen(argThat(
@@ -178,7 +177,7 @@ class SpielServiceImplTest {
         spielService.mussKartenZiehen(2, spiel);
 
         verify(stapelService).kartenAusZiehstapelZiehen(argThat(
-                        deck -> deck.equals(spiel.getZiehstapel())),
+                        deck -> deck.equals(spiel.getZiehStapel())),
                 intThat(numberOfDrawnCards -> numberOfDrawnCards == 2)
         );
         verify(kiService).kartenHinzufuegen(argThat(
@@ -218,7 +217,7 @@ class SpielServiceImplTest {
     public void gameIsOver() {
         spiel.getAktiverSpieler().setSpielerStapel(new ArrayList<>());
 
-        assertTrue(spielService.istSpielAngeschlossen(spiel));
+        assertTrue(spielService.istSpielAbgeschlossen(spiel));
     }
 
     @Test
@@ -226,7 +225,7 @@ class SpielServiceImplTest {
     public void gameIsNotOver() {
         spiel.getAktiverSpieler().setSpielerStapel(List.of(new Karte(Wert.BUBE, Farbe.KREUZ)));
 
-        assertFalse(spielService.istSpielAngeschlossen(spiel));
+        assertFalse(spielService.istSpielAbgeschlossen(spiel));
     }
 
     @Test

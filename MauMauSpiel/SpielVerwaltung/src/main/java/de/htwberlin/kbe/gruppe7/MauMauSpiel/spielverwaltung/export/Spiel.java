@@ -25,8 +25,18 @@ public class Spiel {
     private boolean erfolgreicheAblage;
     private boolean istImUhrzeigersinn;
     private String siegername;
-    private Stapel ziehstapel;
-    //private Stapel ablegestapel;
+    private Stapel ziehStapel;
+    private List<Karte> ablegeStapel;
+
+    public List<Karte> getZiehKarten() {
+        return ziehKarten;
+    }
+
+    public void setZiehKarten(List<Karte> ziehKarten) {
+        this.ziehKarten = ziehKarten;
+    }
+
+    private List<Karte> ziehKarten;
     private Farbe spielfarbe;
 
     public Farbe getWunschFarbe() {
@@ -52,13 +62,13 @@ public class Spiel {
     public Spiel(Long id, List<Spieler> spielerListe, Stapel ziehstapel, int spielrunde) {
         this.id = id;
         this.spielerListe = spielerListe;
-        this.ziehstapel = ziehstapel;
+        this.ziehStapel = ziehstapel;
         this.spielrunde = spielrunde;
     }
 
     public Spiel(List<Spieler> spielerListe, Stapel ziehstapel) {
         this.spielerListe = spielerListe;
-        this.ziehstapel = ziehstapel;
+        this.ziehStapel = ziehstapel;
         this.aktiverSpieler = spielerListe.get(0);
     }
 
@@ -113,33 +123,33 @@ public class Spiel {
      *
      * @return aktueller Ziehstapel
      */
-    public Stapel getZiehstapel() {
-        return ziehstapel;
+    public Stapel getZiehStapel() {
+        return ziehStapel;
     }
 
     /** Setzt den aktuelle Ziehstapel.
      *
-     * @param ziehstapel Liste von Ziehkarten
+     * @param ziehStapel Liste von Ziehkarten
      */
-    public void setZiehstapel(Stapel ziehstapel) {
-        this.ziehstapel = ziehstapel;
+    public void setZiehStapel(Stapel ziehStapel) {
+        this.ziehStapel = ziehStapel;
     }
 
-//    /** Gibt den aktuellen Ablegestapel zurueck.
-//     *
-//     * @return aktueller Ablagestapel
-//     */
-//    public List<Karte> getAblegestapel() {
-//        return ablegestapel;
-//    }
-//
-//    /** Setzt den aktuellen Ablegestapel fest.
-//     *
-//     * @param ablegestapel Liste von Ablagekarten
-//     */
-//    public void setAblegestapel(List<Karte> ablegestapel) {
-//        this.ablegestapel = ablegestapel;
-//    }
+    /** Gibt den aktuellen Ablegestapel zurueck.
+     *
+     * @return aktueller Ablagestapel
+     */
+    public List<Karte> getAblegeStapel() {
+        return ablegeStapel;
+    }
+
+    /** Setzt den aktuellen Ablegestapel fest.
+     *
+     * @param ablegeStapel Liste von Ablagekarten
+     */
+    public void setAblegeStapel(List<Karte> ablegeStapel) {
+        this.ablegeStapel = ablegeStapel;
+    }
 
 
     /** Gibt die aktuelle Rundenzahl zurueck.
@@ -248,6 +258,15 @@ public class Spiel {
 
     public void straffkartenErhoehen() {
         anzahlKartenZiehen += 2;
+    }
+
+    /**
+     * Gibt die oberste Karte des Ablegestapels zurück.
+     *
+     * @return die oberste Karte des Ablegestapels
+     */
+    public Karte getObersteKarteAblagestapel() {
+        return ablegeStapel.get(ablegeStapel.size() - 1);
     }
 
 
