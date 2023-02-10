@@ -1,8 +1,9 @@
-package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.entity;
+package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielverwaltung.export;
 
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Farbe;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export.Spieler;
+import de.htwberlin.kbe.gruppe7.export.Stapel;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,12 +23,21 @@ public class Spiel {
     private boolean naechsterSpielerMussFarbeWuenschen;
     private boolean naechsterSpielerMussAussetzen;
     private boolean erfolgreicheAblage;
-    private boolean spielrichtungRechts;
+    private boolean istImUhrzeigersinn;
     private String siegername;
-
-    private List<Karte> ziehstapel;
-    private List<Karte> ablegestapel;
+    private Stapel ziehstapel;
+    //private Stapel ablegestapel;
     private Farbe spielfarbe;
+
+    public Farbe getWunschFarbe() {
+        return wunschFarbe;
+    }
+
+    public void setWunschFarbe(Farbe wunschFarbe) {
+        this.wunschFarbe = wunschFarbe;
+    }
+
+    private Farbe wunschFarbe;
 
 
     /** Konstruktor einer Spielinstanz.
@@ -39,12 +49,17 @@ public class Spiel {
      * @param spielrunde   Spielrunde
      */
 
-    public Spiel(Long id, List<Spieler> spielerListe, List<Karte> ziehstapel, List<Karte> ablegestapel, int spielrunde) {
+    public Spiel(Long id, List<Spieler> spielerListe, Stapel ziehstapel, int spielrunde) {
         this.id = id;
         this.spielerListe = spielerListe;
         this.ziehstapel = ziehstapel;
-        this.ablegestapel = ablegestapel;
         this.spielrunde = spielrunde;
+    }
+
+    public Spiel(List<Spieler> spielerListe, Stapel ziehstapel) {
+        this.spielerListe = spielerListe;
+        this.ziehstapel = ziehstapel;
+        this.aktiverSpieler = spielerListe.get(0);
     }
 
     public Spiel() {
@@ -98,7 +113,7 @@ public class Spiel {
      *
      * @return aktueller Ziehstapel
      */
-    public List<Karte> getZiehstapel() {
+    public Stapel getZiehstapel() {
         return ziehstapel;
     }
 
@@ -106,25 +121,25 @@ public class Spiel {
      *
      * @param ziehstapel Liste von Ziehkarten
      */
-    public void setZiehstapel(List<Karte> ziehstapel) {
+    public void setZiehstapel(Stapel ziehstapel) {
         this.ziehstapel = ziehstapel;
     }
 
-    /** Gibt den aktuellen Ablegestapel zurueck.
-     *
-     * @return aktueller Ablagestapel
-     */
-    public List<Karte> getAblegestapel() {
-        return ablegestapel;
-    }
-
-    /** Setzt den aktuellen Ablegestapel fest.
-     *
-     * @param ablegestapel Liste von Ablagekarten
-     */
-    public void setAblegestapel(List<Karte> ablegestapel) {
-        this.ablegestapel = ablegestapel;
-    }
+//    /** Gibt den aktuellen Ablegestapel zurueck.
+//     *
+//     * @return aktueller Ablagestapel
+//     */
+//    public List<Karte> getAblegestapel() {
+//        return ablegestapel;
+//    }
+//
+//    /** Setzt den aktuellen Ablegestapel fest.
+//     *
+//     * @param ablegestapel Liste von Ablagekarten
+//     */
+//    public void setAblegestapel(List<Karte> ablegestapel) {
+//        this.ablegestapel = ablegestapel;
+//    }
 
 
     /** Gibt die aktuelle Rundenzahl zurueck.
@@ -161,14 +176,14 @@ public class Spiel {
         this.spielfarbe = farbe;
     }
 
-    /**
-     * Gibt die oberste Karte des Ablegestapels zurück.
-     *
-     * @return die oberste Karte des Ablegestapels
-     */
-    public Karte getObersteKarteAblagestapel() {
-        return ablegestapel.get(ablegestapel.size() - 1);
-    }
+//    /**
+//     * Gibt die oberste Karte des Ablegestapels zurück.
+//     *
+//     * @return die oberste Karte des Ablegestapels
+//     */
+//    public Karte getObersteKarteAblagestapel() {
+//        return ablegestapel.get(ablegestapel.size() - 1);
+//    }
 
 
     public boolean isStandardregeln() {
@@ -219,13 +234,24 @@ public class Spiel {
         this.anzahlKartenZiehen = anzahlKartenZiehen;
     }
 
-    public boolean isSpielrichtungRechts() {
-        return spielrichtungRechts;
+    public boolean isIstImUhrzeigersinn() {
+        return istImUhrzeigersinn;
     }
 
-    public void setSpielrichtungRechts(boolean spielrichtungRechts) {
-        this.spielrichtungRechts = spielrichtungRechts;
+    public void setIstImUhrzeigersinn(boolean istImUhrzeigersinn) {
+        this.istImUhrzeigersinn = istImUhrzeigersinn;
     }
+
+    public void richtungWechseln() {
+        this.istImUhrzeigersinn = !this.isIstImUhrzeigersinn();
+    }
+
+    public void straffkartenErhoehen() {
+        anzahlKartenZiehen += 2;
+    }
+
+
 }
+
 
 

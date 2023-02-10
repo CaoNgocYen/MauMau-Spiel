@@ -8,15 +8,27 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <groupId>de.htwberlin.kbe.gruppe7</groupId>
+            <artifactId>SpielerVerwaltung</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
+            <groupId>de.htwberlin.kbe.gruppe7</groupId>
+            <artifactId>VirtuellerSpielerVerwaltung</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>log4j</groupId>-->
+<!--            <artifactId>log4j</artifactId>-->
+<!--            <version>1.2.17</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>commons-logging</groupId>-->
+<!--            <artifactId>commons-logging</artifactId>-->
+<!--            <version>1.2</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -25,15 +37,21 @@
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>4.5.1</version>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>3.5.10</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.picocontainer</groupId>
-            <artifactId>picocontainer</artifactId>
-            <version>2.15</version>
+            <groupId>de.htwberlin.kbe.gruppe7</groupId>
+            <artifactId>Stapel</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
+        <!--        <dependency>-->
+<!--            <groupId>org.picocontainer</groupId>-->
+<!--            <artifactId>picocontainer</artifactId>-->
+<!--            <version>2.15</version>-->
+<!--        </dependency>-->
 
     </dependencies>
     <parent>

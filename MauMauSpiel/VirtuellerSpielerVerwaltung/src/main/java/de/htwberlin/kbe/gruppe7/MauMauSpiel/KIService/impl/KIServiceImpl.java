@@ -75,12 +75,12 @@ public class KIServiceImpl implements KIService {
     }
 
     @Override
-    public void zuentferndeKarte(Spieler KI, Karte karte) {
+    public void karteEntfernen(Spieler KI, Karte karte) {
 
     }
 
     @Override
-    public void zuhinzufuegendeKarten(Spieler KI, List<Karte> karten) {
+    public void kartenHinzufuegen(Spieler KI, List<Karte> karten) {
 
     }
 

@@ -1,9 +1,6 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export;
 
-import javax.persistence.Embeddable;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
+import javax.persistence.*;
 
 
 /**
@@ -16,7 +13,8 @@ import javax.persistence.Id;
  */
 @Embeddable
 public class Karte {
-
+	@Id
+	@GeneratedValue
 	private Long id;
 
 	private Wert wert;
@@ -61,8 +59,8 @@ public class Karte {
 		return farbe;
 	}
 
-	@Id
-	@GeneratedValue
+	//@Id
+	//@GeneratedValue
 	public Long getId() {
 		return id;
 	}

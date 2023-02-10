@@ -29,9 +29,9 @@ public interface KIService {
      */
     public boolean kiMauGesagt(Spieler KI);
 
-    void zuentferndeKarte(Spieler KI, Karte karte);
+    void karteEntfernen(Spieler KI, Karte karte);
 
-    void zuhinzufuegendeKarten(Spieler KI, List<Karte> karten);
+    void kartenHinzufuegen(Spieler KI, List<Karte> karten);
 
 
 }

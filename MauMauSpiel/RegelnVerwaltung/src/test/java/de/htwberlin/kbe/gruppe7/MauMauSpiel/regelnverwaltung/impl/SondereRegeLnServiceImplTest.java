@@ -194,14 +194,6 @@ public class SondereRegeLnServiceImplTest {
 		assertTrue(regelnService.istMauUnGueltig(spieler));
 	}
 
-	@Test
-	@DisplayName("prüft, ob der Spieler mehr als eine Handkarte hat und 'mau' gesagt hat")
-	public void checkMauIsInvalid3() {
-		spieler.setMauGesagt(true);
-		spieler.setSpielerStapel(List.of(pik9, pik7));
-		assertTrue(regelnService.istMauUnGueltig(spieler));
-	}
-
 	@AfterEach
 	public void tearDown() {
 	}

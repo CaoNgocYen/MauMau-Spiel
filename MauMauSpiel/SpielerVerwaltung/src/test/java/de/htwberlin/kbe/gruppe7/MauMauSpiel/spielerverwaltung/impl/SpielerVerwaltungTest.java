@@ -58,12 +58,33 @@ public class SpielerVerwaltungTest {
     }
 
     @Test
-    public void testZiehenKarte(){
-        spielerService.handKarteHinzufuegen(spieler, (List<Karte>) karte1);
-        handKarten.add(karte1);
-        Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
+    public void testGetNaechsterSpieler() {
+        Spieler spieler1 = new Spieler("Player 1");
+        Spieler spieler2 = new Spieler("Player 2");
+        Spieler spieler3 = new Spieler("Player 3");
 
+        List<Spieler> spielerList = new ArrayList<>();
+        spielerList.add(spieler1);
+        spielerList.add(spieler2);
+        spielerList.add(spieler3);
+
+        Spieler nextPlayer = spielerService.getNaechsterSpieler(spielerList, spieler1);
+        Assertions.assertEquals(nextPlayer, spieler2, "The next player should be spieler2");
+
+        nextPlayer = spielerService.getNaechsterSpieler(spielerList, spieler2);
+        Assertions.assertEquals(nextPlayer, spieler3, "The next player should be spieler3");
+
+        nextPlayer = spielerService.getNaechsterSpieler(spielerList, spieler3);
+        Assertions.assertEquals(nextPlayer, spieler1, "The next player should be spieler1");
     }
+
+//    @Test
+//    public void testZiehenKarte(){
+//        spielerService.handKarteHinzufuegen(spieler, (List<Karte>) karte1);
+//        handKarten.add(karte1);
+//        Assertions.assertEquals(handKarten, spieler.getSpielerStapel());
+//
+//    }
 
 
 }

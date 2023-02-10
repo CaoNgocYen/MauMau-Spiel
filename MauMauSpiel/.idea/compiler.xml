@@ -12,6 +12,8 @@
         <module name="Konfiguration" />
         <module name="SpielerVerwaltung" />
         <module name="ui" />
+        <module name="ExceptionService" />
+        <module name="Stapel" />
         <module name="KartenVerwaltung" />
         <module name="RegelnVerwaltung" />
         <module name="VirtuellerSpielerVerwaltung" />

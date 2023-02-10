@@ -52,6 +52,7 @@ public interface KartenService {
 	 */
 	List<Karte> mischenKarten(List<Karte> kartenStapel);
 
+
 	List<Farbe> getFarben();
 
 	List<Wert> getWerten();

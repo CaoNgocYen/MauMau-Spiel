@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ExceptionService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ExceptionService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Exceptions/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Exceptions/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/KartenVerwaltung/src/main/java" charset="UTF-8" />
@@ -13,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/SpielVerwaltung/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpielerVerwaltung/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpielerVerwaltung/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Stapel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Stapel/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VirtuellerSpielerVerwaltung/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/VirtuellerSpielerVerwaltung/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

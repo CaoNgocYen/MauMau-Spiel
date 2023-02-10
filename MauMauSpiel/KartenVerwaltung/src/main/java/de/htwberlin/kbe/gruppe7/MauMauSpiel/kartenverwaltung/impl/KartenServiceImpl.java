@@ -34,6 +34,7 @@ public class KartenServiceImpl implements KartenService {
 	}
 
 
+
 	@Override
 	public List<Karte> hinzufuegfenKarte(List<Karte> kartenStapel, int anzahlKarten) {
 		List<Karte> spielerStapel = new ArrayList();

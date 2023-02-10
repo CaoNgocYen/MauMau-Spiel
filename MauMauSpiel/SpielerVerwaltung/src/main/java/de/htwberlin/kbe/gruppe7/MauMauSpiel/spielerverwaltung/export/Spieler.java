@@ -1,7 +1,7 @@
 package de.htwberlin.kbe.gruppe7.MauMauSpiel.spielerverwaltung.export;
 import de.htwberlin.kbe.gruppe7.MauMauSpiel.kartenverwaltung.export.Karte;
 
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,15 +9,20 @@ import java.util.List;
 @Embeddable
 public class Spieler {
 
+	@Id
+	@GeneratedValue
+	private Long id;
+	@Column(nullable = false)
 	private String name;
-
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Karte> spielerStapel;
 
 	//private boolean mauGesagt = false;
+	@Column(nullable = false)
 	private boolean mauGesagt;
-
+	@Column(nullable = false)
 	private boolean mussAussetzen;
-
+	@Column(nullable = false)
 	private boolean virtuellerSpieler = false;
 	public  Spieler () {
 	}
