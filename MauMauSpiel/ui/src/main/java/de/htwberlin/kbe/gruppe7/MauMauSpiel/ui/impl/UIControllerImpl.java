@@ -499,11 +499,11 @@ public class UIControllerImpl implements UIControllerService {
         }
         spiel.setSpielerListe(spielerList);
         spiel.setAktiverSpieler(spiel.getSpielerListe().get(0));
-        spiel.setZiehStapel((Stapel) kartenService.anlegenStapel(anzahlKarten));
+        spiel.setZiehKarten(kartenService.anlegenStapel(anzahlKarten));
         ersteZiehkarte.add(spiel.getZiehKarten().get(spiel.getZiehKarten().size()-1));
         spiel.getZiehKarten().remove(spiel.getZiehKarten().size()-1);
         spiel.setAblegeStapel(ersteZiehkarte);
-        spiel.setZiehStapel((Stapel) spielService.fuenfKartenAusteilen(spiel.getZiehKarten(),spielerList));
+        spiel.setZiehKarten(spielService.fuenfKartenAusteilen(spiel.getZiehKarten(),spielerList));
         spielService.setRegelnwerk(regelnModusAuswaehlen());
 
         try{

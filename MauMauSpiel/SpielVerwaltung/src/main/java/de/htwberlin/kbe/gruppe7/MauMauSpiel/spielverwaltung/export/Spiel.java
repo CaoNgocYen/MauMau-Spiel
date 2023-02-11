@@ -26,6 +26,9 @@ public class Spiel {
     private boolean istImUhrzeigersinn;
     private String siegername;
     private Stapel ziehStapel;
+    private List<Karte> ziehKarten;
+    private Farbe spielfarbe;
+
     private List<Karte> ablegeStapel;
 
     public List<Karte> getZiehKarten() {
@@ -36,8 +39,8 @@ public class Spiel {
         this.ziehKarten = ziehKarten;
     }
 
-    private List<Karte> ziehKarten;
-    private Farbe spielfarbe;
+    //private List<Karte> ziehKarten;
+
 
     public Farbe getWunschFarbe() {
         return wunschFarbe;
